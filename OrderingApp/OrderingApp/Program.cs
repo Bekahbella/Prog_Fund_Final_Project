@@ -13,9 +13,9 @@ namespace OrderingApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.EnableVisualStyles(); //calling application base class telling it to enable styles
+            Application.SetCompatibleTextRenderingDefault(false); //default is false because we changed it
+            Application.Run(new Ordering());
         }
     }
 }
