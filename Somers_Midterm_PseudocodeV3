@@ -1,0 +1,90 @@
+Becky Somers
+Prog Fund II
+Midterm PseudocodeV3
+
+Start
+   Declarations
+      private string bunChoice [3] =  “white”, “wheat”, “potato”
+      string bun
+      private string cheeseChoice [3] =  “cheddar”, “swiss”, “american”
+      string cheese
+      private string meatChoice [2] = “burger”, “veggie”
+      string meat
+      private string toppingChoice [4] = “lettuce”, “tomato”, “onion”, “pickles”
+      string topping
+      private string sauceChoice [4] = “ketchup”, “mustard”, “mayo”,  “bbq”
+      string sauce
+      private string burgerSummary
+      private string correctOrder
+      private string customerReceipt
+      private string burgerOrderString
+      string msg_YES =  “this is correct”
+      string msg_No =  “this is not correct”
+      output “Choose your bun”
+      bunOrder()
+   
+   output  “Choose your cheese”
+   cheeseOrder()
+   output  “Choose your meat”
+   meatOrder()
+   output  “Choose your toppings”
+   toppingOrder()
+   output “Choose your sauce”
+   sauceOrder()
+   output burgerSummary
+   output “Is your order correct?”
+   if msg_Yes <> msg_Yes
+      bunOrder()
+   else
+   output “Press any key to place your order”
+   input buttonClick
+   output customerReceipt
+   output burgerOrderString
+stop
+
+
+
+
+
+
+
+bunOrder()
+   input bunChoice
+   if bun <> bunChoice
+      bunChoice = bunChoice + 1
+   else
+     output bunChoice
+return
+
+cheeseOrder()
+   input cheeseChoice
+   if cheese <> cheeseChoice
+      cheeseChoice = cheeseChoice + 1
+   else
+     output cheeseChoice
+return
+
+meatOrder()
+   input meatChoice
+   if meat <> meatChoice
+      meatChoice = meatChoice + 1
+   else
+     output meatChoice
+return
+
+
+toppingOrder()
+   input toppingChoice
+   if topping <> toppingChoice
+      toppingChoice = toppingChoice + 1
+   else
+     output toppingChoice
+return
+
+sauceOrder()
+   input sauceChoice
+   if sauce <> sauceChoice
+      sauceChoice = sauceChoice + 1
+   else
+     output sauceChoice
+return
