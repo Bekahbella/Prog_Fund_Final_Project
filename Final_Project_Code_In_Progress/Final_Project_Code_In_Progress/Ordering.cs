@@ -11,31 +11,44 @@ namespace Final_Project_Code_In_Progress
 {
     public partial class Ordering : Form
     {
-  //Declarations
-            bool takeOut;
-            string bunType = "";
-            int pattyNum;
-            string orderStep; //keeps track of current pannel
+        //Declarations
+        bool takeOut;
+        string bunType = "";
+        int pattyNum;
+        string orderStep; //keeps track of current pannel
 
-            Array[] cheeseType;
-            Array[] toppings;
-            Array[] sauce;
-            Array[] optionsArray;
         
-        
-        
+        string [] toppings = new string[] {};
+        string [] sauce = new string[] {};
+        string [] optionsArray = new string [4];
+
+
+
         public Ordering()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) //all things you change programmatically
         {
-            
+
             pnlStart.Visible = true;
+            //Hide all panels
             pnlLocation.Visible = false;
             pnlOrderType.Visible = false;
             pnlPreviousNext.Visible = false;
+            pnlBuild.Visible = false;
+            pnlBun.Visible = false;
+            pnlCheese.Visible = false;
+            pnlToppings.Visible = false;
+            pnlSauce.Visible = false;
+            pnlSpecialty.Visible = false;
+            pnlSummary.Visible = false;
+            pnlComplete.Visible = false;
+
+            lblStack.Text = "";
+
+
 
         }
 
@@ -56,7 +69,7 @@ namespace Final_Project_Code_In_Progress
 
         private void btnOut_Click(object sender, EventArgs e)
         {
- 
+
             takeOut = true;
             pnlLocation.Visible = false;
             pnlOrderType.Visible = true;
@@ -66,21 +79,38 @@ namespace Final_Project_Code_In_Progress
         private void btnPrev_Click(object sender, EventArgs e)
         {
 
-            switch (orderStep)
+            switch (orderStep) //evaluates variable of orderStep and runs case statement where I am currently at I want to go back a page....for prev next
             {
-                case "orderType":
-                    pnlOrderType.Visible = false;
-                    pnlLocation.Visible = true;
+              
+                case "build":
+                    pnlBuild.Visible = false;
+                    pnlBun.Visible = true;
+                    break;
+                case "bun":
+                    pnlBuild.Visible = true;
+                    pnlCheese.Visible = false;
                     break;
                 default:
                     pnlStart.Visible = true;
                     break;
             }
 
-       
+
+        }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void pnlOrderType_VisibleChanged(object sender, EventArgs e) //tells program what pannel it is on so we know our location in the application
+        {
+            if (pnlOrderType.Visible == true)
+            {
+                orderStep = "ordertype";
+            }
         }
 
-        private void pnlOrderType_VisibleChanged(object sender, EventArgs e)
+        private void pnlLocation_VisibleChanged(object sender, EventArgs e)
         {
             if (pnlOrderType.Visible == true)
             {
@@ -88,8 +118,113 @@ namespace Final_Project_Code_In_Progress
             }
 
         }
-        
+        private void pnlStart_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlOrderType.Visible == true)
+            {
+                orderStep = "start";
+            }
 
         }
-    }
 
+        
+        private void btnBuild_Click(object sender, EventArgs e)
+        {
+            pnlOrderType.Visible = false;
+
+        }
+
+        private void pnlBun_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlBun.Visible == true)
+            {
+                orderStep = "bun";
+                btnNext.Enabled = false; //button is there but you can't click on it
+                
+                if (optionsArray[0] == "") //if array position 0 is equal to an empty array do parenthesis
+                {
+                    btnNext.Enabled = true; //continue button will be enabled
+                }
+            }
+        }
+        private void btnSpecialty_Click(object sender, EventArgs e)
+        {
+            pnlOrderType.Visible = false;
+            pnlBuild.Visible = true;
+
+        }
+
+        private void pnlBuild_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlLocation.Visible == true)
+            {
+                orderStep = "build";
+                
+            }
+
+            btnNext.Visible = false;
+
+
+        }
+
+        private void btnBuildStart_Click(object sender, EventArgs e)
+        {
+            pnlBuild.Visible = false;
+            pnlBun.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+        }
+        //Bun Click start
+        private void btnBun1_Click(object sender, EventArgs e)
+        {
+            optionsArray[0] = "whiteBun\n";
+            lblStack.Text = optionsArray[0];
+            btnNext.Enabled = true;
+        }
+
+        private void btnBun2_Click(object sender, EventArgs e)
+        {
+            optionsArray[0] = "wheatBun\n";
+            lblStack.Text = optionsArray[0];
+            btnNext.Enabled = true;
+        }
+
+        private void btnBun3_Click(object sender, EventArgs e)
+        {
+            optionsArray[0] = "potatoBun\n";
+            lblStack.Text = optionsArray[0];
+            btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
+        }
+
+        private void btnAmerican_Click(object sender, EventArgs e)
+        {
+            optionsArray[1] = "americanCheese\n";
+            lblStack.Text += optionsArray[1];
+        }
+
+        private void btnCheddar_Click(object sender, EventArgs e)
+        {
+
+            optionsArray[1] = "cheddarCheese\n";
+            if (optionsArray[1] != "")
+            {
+                lblStack.Text += optionsArray[1];
+            }
+        }
+
+        private void btnSwiss_Click(object sender, EventArgs e)
+        {
+            optionsArray[1] = "swissCheese\n";
+            lblStack.Text += optionsArray[1];
+        }
+
+        private void btnNoCheese_Click(object sender, EventArgs e)
+        {
+            optionsArray[1] = "noCheese\n";
+            lblStack.Text += optionsArray[1];
+        }
+
+        
+        //Bun Click End
+    }
+}
