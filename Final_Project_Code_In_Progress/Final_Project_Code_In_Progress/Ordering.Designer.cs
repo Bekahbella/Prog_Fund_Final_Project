@@ -49,6 +49,7 @@
             this.btnBun1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlCheese = new System.Windows.Forms.Panel();
+            this.btnNoCheese = new System.Windows.Forms.Button();
             this.btnSwiss = new System.Windows.Forms.Button();
             this.btnCheddar = new System.Windows.Forms.Button();
             this.btnAmerican = new System.Windows.Forms.Button();
@@ -77,6 +78,8 @@
             this.pnlComplete = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlStack = new System.Windows.Forms.Panel();
+            this.lblStack = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.pnlBuild = new System.Windows.Forms.Panel();
             this.btnBuildStart = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -85,9 +88,6 @@
             this.btnToppings = new System.Windows.Forms.Button();
             this.btnCheese = new System.Windows.Forms.Button();
             this.btnBun = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblStack = new System.Windows.Forms.Label();
-            this.btnNoCheese = new System.Windows.Forms.Button();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -318,6 +318,16 @@
             this.pnlCheese.Name = "pnlCheese";
             this.pnlCheese.Size = new System.Drawing.Size(747, 265);
             this.pnlCheese.TabIndex = 1;
+            // 
+            // btnNoCheese
+            // 
+            this.btnNoCheese.Location = new System.Drawing.Point(308, 188);
+            this.btnNoCheese.Name = "btnNoCheese";
+            this.btnNoCheese.Size = new System.Drawing.Size(88, 64);
+            this.btnNoCheese.TabIndex = 4;
+            this.btnNoCheese.Text = "No Cheese";
+            this.btnNoCheese.UseVisualStyleBackColor = true;
+            this.btnNoCheese.Click += new System.EventHandler(this.btnNoCheese_Click);
             // 
             // btnSwiss
             // 
@@ -590,6 +600,24 @@
             this.pnlStack.Size = new System.Drawing.Size(137, 431);
             this.pnlStack.TabIndex = 4;
             // 
+            // lblStack
+            // 
+            this.lblStack.AutoSize = true;
+            this.lblStack.Location = new System.Drawing.Point(41, 77);
+            this.lblStack.Name = "lblStack";
+            this.lblStack.Size = new System.Drawing.Size(39, 13);
+            this.lblStack.TabIndex = 1;
+            this.lblStack.Text = "[stack]";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(38, 31);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Your Order";
+            // 
             // pnlBuild
             // 
             this.pnlBuild.Controls.Add(this.btnBuildStart);
@@ -671,46 +699,18 @@
             this.btnBun.Text = "B";
             this.btnBun.UseVisualStyleBackColor = true;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 31);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Your Order";
-            // 
-            // lblStack
-            // 
-            this.lblStack.AutoSize = true;
-            this.lblStack.Location = new System.Drawing.Point(41, 77);
-            this.lblStack.Name = "lblStack";
-            this.lblStack.Size = new System.Drawing.Size(39, 13);
-            this.lblStack.TabIndex = 1;
-            this.lblStack.Text = "[stack]";
-            // 
-            // btnNoCheese
-            // 
-            this.btnNoCheese.Location = new System.Drawing.Point(308, 188);
-            this.btnNoCheese.Name = "btnNoCheese";
-            this.btnNoCheese.Size = new System.Drawing.Size(88, 64);
-            this.btnNoCheese.TabIndex = 4;
-            this.btnNoCheese.Text = "No Cheese";
-            this.btnNoCheese.UseVisualStyleBackColor = true;
-            this.btnNoCheese.Click += new System.EventHandler(this.btnNoCheese_Click);
-            // 
             // Ordering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 500);
+            this.Controls.Add(this.pnlBuild);
+            this.Controls.Add(this.pnlStart);
             this.Controls.Add(this.pnlCheese);
             this.Controls.Add(this.pnlPreviousNext);
             this.Controls.Add(this.pnlBun);
             this.Controls.Add(this.pnlStack);
-            this.Controls.Add(this.pnlBuild);
             this.Controls.Add(this.pnlOrderType);
-            this.Controls.Add(this.pnlStart);
             this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlSauce);
             this.Controls.Add(this.pnlToppings);
