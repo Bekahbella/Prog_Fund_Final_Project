@@ -38,7 +38,7 @@ namespace Final_Project_Code_In_Progress
             //Hide all panels
             pnlLocation.Visible = false;
             pnlOrderType.Visible = false;
-            pnlPreviousNext.Visible = false;
+            pnlPreviousNext.Visible = true;
             pnlBuild.Visible = false;
             pnlBun.Visible = false;
             pnlCheese.Visible = false;
@@ -47,8 +47,8 @@ namespace Final_Project_Code_In_Progress
             pnlSpecialty.Visible = false;
             pnlSummary.Visible = false;
             pnlComplete.Visible = false;
-            pnlNav.Visible = false;
-            pnlStack.Visible = false;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
 
             lblStack.Text = "";
 
@@ -56,16 +56,17 @@ namespace Final_Project_Code_In_Progress
 
         }
 
-        //Panel Visible Changed Events 
+        //Panel Visible Changed Events //panel is object changes from load event true
 
         private void pnlStart_VisibleChanged(object sender, EventArgs e)
         {
-            if (pnlOrderType.Visible == true)
+            if (pnlStart.Visible == true)
             {
                 orderStep = "start";
             }
 
         }
+
 
         private void pnlLocation_VisibleChanged(object sender, EventArgs e)
         {
@@ -83,6 +84,7 @@ namespace Final_Project_Code_In_Progress
                 orderStep = "ordertype";
             }
         }
+    
 
         private void pnlBuild_VisibleChanged(object sender, EventArgs e)
         {
@@ -90,8 +92,10 @@ namespace Final_Project_Code_In_Progress
             if (pnlBuild.Visible == true)
             {
                 orderStep = "build";
-                btnNext.Visible = false;
+                
             }
+
+            btnNext.Visible = false;
         }
 
 
@@ -109,17 +113,66 @@ namespace Final_Project_Code_In_Progress
             }
         }
 
+        private void pnCheese_VisibleChanged(object sender, EventArgs e)
+        {
+
+            if (pnlCheese.Visible == true)
+            {
+                orderStep = "cheese";
+                btnNext.Enabled = false; //must select type before moving on
+                if (optionsArray[1] == "")
+                {
+                    btnNext.Enabled = true;
+                    btnPrev.Enabled = true;
+                }
+                
+            }
+        }
+
+        private void pnlToppings_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlToppings.Visible == true)
+            {
+                orderStep = "toppings";
+                btnNext.Enabled = false; //must select type before moving on
+                if (optionsArray[2] == "")
+                {
+                    btnNext.Enabled = true;
+                    btnPrev.Enabled = true;
+                }
+
+            }
+        }
+
+        private void pnlSauce_VisibleChanged(object sender, EventArgs e)
+        {
+
+            if (pnlSauce.Visible == true)
+            {
+                orderStep = "sauce";
+                btnNext.Enabled = false; //must select type before moving on
+                if (optionsArray[3] == "")
+                {
+                    btnNext.Enabled = true;
+                    btnPrev.Enabled = true;
+                }
+
+            }
+        }
 
         //Button Click Events
 
+        //pnl 1 Start button clicks
         private void btnStart_Click(object sender, EventArgs e)
         {
             pnlStart.Visible = false;
-
             pnlLocation.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+            pnlPreviousNext.Visible = true;
         }
 
-
+        //pnl 2 Location button clicks
         private void btnIn_Click(object sender, EventArgs e)
         {
             takeOut = false;
@@ -129,6 +182,8 @@ namespace Final_Project_Code_In_Progress
             pnlOrderType.Visible = true;
 
             pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
 
         }
 
@@ -144,45 +199,69 @@ namespace Final_Project_Code_In_Progress
             pnlPreviousNext.Visible = true;
         }
 
+        //pnl 3 Build panel button clicks
         private void btnBuild_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
-
+            //pnlBun.Visible = true;
             pnlBuild.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+            pnlPreviousNext.Visible = true;
+
 
         }
 
         private void btnSpecialty_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+            pnlPreviousNext.Visible = true;
 
-            //pnlBuild.Visible = true;
 
         }
 
 
 
-
+        //pnl Nav button clicks
         private void btnPrev_Click(object sender, EventArgs e)
         {
 
             switch (orderStep) //evaluates variable of orderStep and runs case statement where I am currently at I want to go back a page....for prev next
             {
-              
-                case "order type":
+
+                case "ordertype":
                     pnlOrderType.Visible = false;
                     pnlLocation.Visible = true;
                     break;
                 
                 case "build":
-                    pnlBuild.Visible = false;
-                    pnlLocation.Visible = true;
+                    pnlBun.Visible = false;
+                    pnlBuild.Visible = true;
                     break;
 
-                case "bun":
-                    pnlBuild.Visible = true;
-                    pnlBun.Visible = false;
+                case "bun": //want to move to bun from cheese
+                    pnlCheese.Visible = false; //current panel, needs to go away and move backwards
+                    pnlBun.Visible = true; //needs to become visible when clicking prev button
                     break;
+                
+                case "cheese":
+                    pnlToppings.Visible = false;
+                    pnlCheese.Visible = true;
+                    break;
+
+                case "toppings": //want to move to bun from cheese
+                    pnlCheese.Visible = false; //current panel, needs to go away and move backwards
+                    pnlToppings.Visible = true; //needs to become visible when clicking prev button
+                    break;
+
+                case "sauce":
+                    pnlToppings.Visible = false; //current panel, needs to go away and move backwards
+                    pnlSauce.Visible = true; //needs to become visible when clicking prev button
+                    break;
+
+
 
                 default:
                     pnlStart.Visible = true;
@@ -199,16 +278,32 @@ namespace Final_Project_Code_In_Progress
 
                 case "build":
 
-                pnlBuild.Visible = false;
+                pnlBuild.Visible = false; //want to move to next panel, needs to go away
 
-                pnlBun.Visible = true;
+                pnlBun.Visible = true; //next panel moving to ...want to make visible
                 break;
 
                 case "bun":
 
-                pnlBun.Visible = false;
-                pnlCheese.Visible = true;
+                pnlBun.Visible = false;//pnl you are on
+                pnlCheese.Visible = true;//pnl you are moving to
                 break;
+
+                case "cheese":
+                pnlCheese.Visible = false;//pnl you are on
+                pnlToppings.Visible = true;//pnly you are moving to
+                break;
+
+                case "toppings":
+                pnlToppings.Visible = false;//pnl you are on 
+                pnlSauce.Visible = true;//pnl you are moving to
+                break;
+
+                case "sauce":
+                pnlSauce.Visible = false;//pnl you are on
+                pnlSummary.Visible = true;//pnl yo uare moving to
+                break;
+
 
                 default:
                 pnlStart.Visible = true;
@@ -221,22 +316,27 @@ namespace Final_Project_Code_In_Progress
                 
         
         
-
+        //Build Panel
         private void btnBuildStart_Click(object sender, EventArgs e)
         {
             pnlBuild.Visible = false;
             pnlBun.Visible = true;
+            pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
         }
-        //Bun Click start
+
+
+        //Bun panel button click start
         private void btnBun1_Click(object sender, EventArgs e)
         {
             optionsArray[0] = "whiteBun\n";
             lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;
+            btnPrev.Enabled = true;
         }
 
+        
         
         
         private void btnBun2_Click(object sender, EventArgs e)
@@ -244,6 +344,7 @@ namespace Final_Project_Code_In_Progress
             optionsArray[0] = "wheatBun\n";
             lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;
+            btnPrev.Enabled = true;
         }
 
         
@@ -253,14 +354,17 @@ namespace Final_Project_Code_In_Progress
             optionsArray[0] = "potatoBun\n";
             lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
+            btnPrev.Enabled = true;
         }
 
-        
+        //panel cheese button click start
         
         private void btnAmerican_Click(object sender, EventArgs e)
         {
             optionsArray[1] = "americanCheese\n";
             lblStack.Text += optionsArray[1];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
         }
 
         
@@ -269,12 +373,10 @@ namespace Final_Project_Code_In_Progress
         {
 
             optionsArray[1] = "cheddarCheese\n";
-            
-            if (optionsArray[1] != "")
+            lblStack.Text += optionsArray[1];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
 
-            {
-                lblStack.Text += optionsArray[1];
-            }
 
         }
 
@@ -284,8 +386,9 @@ namespace Final_Project_Code_In_Progress
 
         {
             optionsArray[1] = "swissCheese\n";
-
             lblStack.Text += optionsArray[1];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
         }
 
         
@@ -294,11 +397,121 @@ namespace Final_Project_Code_In_Progress
 
         {
             optionsArray[1] = "noCheese\n";
-
             lblStack.Text += optionsArray[1];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        
+
         }
 
         
-        //Bun Click End
+        
+        //Toppings Panel button click start
+        private void btnPickle_Click(object sender, EventArgs e)
+        {
+            optionsArray[2] = "Pickle\n";
+            lblStack.Text += optionsArray[2];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+
+        private void btnTomato_Click(object sender, EventArgs e)
+        {
+            optionsArray[2] = "Tomato\n";
+            lblStack.Text += optionsArray[2];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+
+        }
+
+        private void btnOnion_Click(object sender, EventArgs e)
+        {
+            optionsArray[2] = "Onion\n";
+            lblStack.Text += optionsArray[2];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+
+        private void btnLettuce_Click(object sender, EventArgs e)
+        {
+            optionsArray[2] = "Lettuce\n";
+            lblStack.Text += optionsArray[2];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+        //sauce panel button click start
+
+        private void btnKetchup_Click(object sender, EventArgs e)
+        {
+            optionsArray[3] = "Ketchup\n";
+            lblStack.Text += optionsArray[3];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+
+        private void btnMustard_Click(object sender, EventArgs e)
+        {
+            optionsArray[3] = "Mustard\n";
+            lblStack.Text += optionsArray[3];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+
+        private void btnMayo_Click(object sender, EventArgs e)
+        {
+            optionsArray[3] = "Mayo\n";
+            lblStack.Text += optionsArray[3];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+
+        private void btnSpecialSauce_Click(object sender, EventArgs e)
+        {
+            optionsArray[3] = "SpecialSauce\n";
+            lblStack.Text += optionsArray[3];
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+        }
+
+      //Panel Top Nav Button Clicks
+        private void btnNavBun_Click(object sender, EventArgs e)
+        {
+            
+            pnlBun.Visible = true;
+            pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+        }
+
+        private void btnNavCheese_Click(object sender, EventArgs e)
+        {
+            pnlCheese.Visible = true;
+            pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+        }
+
+        private void btnNavToppings_Click(object sender, EventArgs e)
+        {
+            pnlToppings.Visible = true;
+            pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+        }
+
+        private void btnNavSauce_Click(object sender, EventArgs e)
+        {
+            pnlSauce.Visible = true;
+            pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+        }
+
+
+
+
+
+
+
     }
 }
