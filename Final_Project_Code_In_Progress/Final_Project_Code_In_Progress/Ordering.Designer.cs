@@ -124,7 +124,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(305, 159);
+            this.btnStart.Location = new System.Drawing.Point(296, 131);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(140, 66);
             this.btnStart.TabIndex = 0;
@@ -134,7 +134,7 @@
             // 
             // pnlLocation
             // 
-            this.pnlLocation.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pnlLocation.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pnlLocation.Controls.Add(this.btnOut);
             this.pnlLocation.Controls.Add(this.btnIn);
             this.pnlLocation.Controls.Add(this.label1);
@@ -145,19 +145,19 @@
             // 
             // btnOut
             // 
-            this.btnOut.Location = new System.Drawing.Point(481, 169);
+            this.btnOut.Location = new System.Drawing.Point(356, 111);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(109, 67);
+            this.btnOut.Size = new System.Drawing.Size(115, 76);
             this.btnOut.TabIndex = 1;
-            this.btnOut.Text = "Out";
+            this.btnOut.Text = "Take Out";
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(152, 176);
+            this.btnIn.Location = new System.Drawing.Point(224, 111);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(110, 66);
+            this.btnIn.Size = new System.Drawing.Size(115, 76);
             this.btnIn.TabIndex = 0;
             this.btnIn.Text = "Eat In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(252, 89);
+            this.label1.Location = new System.Drawing.Point(211, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 39);
             this.label1.TabIndex = 2;
@@ -186,7 +186,8 @@
             // 
             // btnBuild
             // 
-            this.btnBuild.Location = new System.Drawing.Point(241, 142);
+            this.btnBuild.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuild.Location = new System.Drawing.Point(224, 111);
             this.btnBuild.Name = "btnBuild";
             this.btnBuild.Size = new System.Drawing.Size(115, 76);
             this.btnBuild.TabIndex = 0;
@@ -197,16 +198,17 @@
             // lblOrderType
             // 
             this.lblOrderType.AutoSize = true;
-            this.lblOrderType.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderType.Location = new System.Drawing.Point(234, 42);
+            this.lblOrderType.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderType.Location = new System.Drawing.Point(191, 47);
             this.lblOrderType.Name = "lblOrderType";
-            this.lblOrderType.Size = new System.Drawing.Size(296, 37);
+            this.lblOrderType.Size = new System.Drawing.Size(314, 39);
             this.lblOrderType.TabIndex = 2;
             this.lblOrderType.Text = "Choose An Option";
             // 
             // btnSpecialty
             // 
-            this.btnSpecialty.Location = new System.Drawing.Point(394, 142);
+            this.btnSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpecialty.Location = new System.Drawing.Point(356, 111);
             this.btnSpecialty.Name = "btnSpecialty";
             this.btnSpecialty.Size = new System.Drawing.Size(111, 75);
             this.btnSpecialty.TabIndex = 1;
@@ -237,7 +239,7 @@
             // 
             this.btnPrev.Location = new System.Drawing.Point(41, 14);
             this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 57);
+            this.btnPrev.Size = new System.Drawing.Size(78, 52);
             this.btnPrev.TabIndex = 0;
             this.btnPrev.Text = "< Previous";
             this.btnPrev.UseVisualStyleBackColor = true;
@@ -311,9 +313,9 @@
             // 
             // btnNoCheese
             // 
-            this.btnNoCheese.Location = new System.Drawing.Point(308, 188);
+            this.btnNoCheese.Location = new System.Drawing.Point(484, 111);
             this.btnNoCheese.Name = "btnNoCheese";
-            this.btnNoCheese.Size = new System.Drawing.Size(88, 64);
+            this.btnNoCheese.Size = new System.Drawing.Size(75, 64);
             this.btnNoCheese.TabIndex = 4;
             this.btnNoCheese.Text = "No Cheese";
             this.btnNoCheese.UseVisualStyleBackColor = true;
@@ -321,9 +323,9 @@
             // 
             // btnSwiss
             // 
-            this.btnSwiss.Location = new System.Drawing.Point(451, 88);
+            this.btnSwiss.Location = new System.Drawing.Point(356, 111);
             this.btnSwiss.Name = "btnSwiss";
-            this.btnSwiss.Size = new System.Drawing.Size(99, 67);
+            this.btnSwiss.Size = new System.Drawing.Size(75, 64);
             this.btnSwiss.TabIndex = 3;
             this.btnSwiss.Text = "Swiss";
             this.btnSwiss.UseVisualStyleBackColor = true;
@@ -331,9 +333,9 @@
             // 
             // btnCheddar
             // 
-            this.btnCheddar.Location = new System.Drawing.Point(302, 90);
+            this.btnCheddar.Location = new System.Drawing.Point(224, 111);
             this.btnCheddar.Name = "btnCheddar";
-            this.btnCheddar.Size = new System.Drawing.Size(96, 65);
+            this.btnCheddar.Size = new System.Drawing.Size(75, 64);
             this.btnCheddar.TabIndex = 2;
             this.btnCheddar.Text = "Cheddar";
             this.btnCheddar.UseVisualStyleBackColor = true;
@@ -341,9 +343,9 @@
             // 
             // btnAmerican
             // 
-            this.btnAmerican.Location = new System.Drawing.Point(135, 88);
+            this.btnAmerican.Location = new System.Drawing.Point(103, 111);
             this.btnAmerican.Name = "btnAmerican";
-            this.btnAmerican.Size = new System.Drawing.Size(100, 67);
+            this.btnAmerican.Size = new System.Drawing.Size(75, 64);
             this.btnAmerican.TabIndex = 1;
             this.btnAmerican.Text = "American";
             this.btnAmerican.UseVisualStyleBackColor = true;
@@ -353,7 +355,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(223, 18);
+            this.label4.Location = new System.Drawing.Point(191, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(322, 37);
             this.label4.TabIndex = 0;
@@ -374,9 +376,9 @@
             // 
             // btnLettuce
             // 
-            this.btnLettuce.Location = new System.Drawing.Point(250, 152);
+            this.btnLettuce.Location = new System.Drawing.Point(484, 111);
             this.btnLettuce.Name = "btnLettuce";
-            this.btnLettuce.Size = new System.Drawing.Size(75, 23);
+            this.btnLettuce.Size = new System.Drawing.Size(75, 64);
             this.btnLettuce.TabIndex = 4;
             this.btnLettuce.Text = "Lettuce";
             this.btnLettuce.UseVisualStyleBackColor = true;
@@ -384,9 +386,9 @@
             // 
             // btnOnion
             // 
-            this.btnOnion.Location = new System.Drawing.Point(247, 80);
+            this.btnOnion.Location = new System.Drawing.Point(356, 111);
             this.btnOnion.Name = "btnOnion";
-            this.btnOnion.Size = new System.Drawing.Size(75, 23);
+            this.btnOnion.Size = new System.Drawing.Size(75, 64);
             this.btnOnion.TabIndex = 3;
             this.btnOnion.Text = "Onion";
             this.btnOnion.UseVisualStyleBackColor = true;
@@ -394,9 +396,9 @@
             // 
             // btnTomato
             // 
-            this.btnTomato.Location = new System.Drawing.Point(54, 152);
+            this.btnTomato.Location = new System.Drawing.Point(224, 111);
             this.btnTomato.Name = "btnTomato";
-            this.btnTomato.Size = new System.Drawing.Size(75, 23);
+            this.btnTomato.Size = new System.Drawing.Size(75, 64);
             this.btnTomato.TabIndex = 2;
             this.btnTomato.Text = "Tomatoes";
             this.btnTomato.UseVisualStyleBackColor = true;
@@ -404,9 +406,9 @@
             // 
             // btnPickle
             // 
-            this.btnPickle.Location = new System.Drawing.Point(50, 78);
+            this.btnPickle.Location = new System.Drawing.Point(103, 111);
             this.btnPickle.Name = "btnPickle";
-            this.btnPickle.Size = new System.Drawing.Size(75, 23);
+            this.btnPickle.Size = new System.Drawing.Size(75, 64);
             this.btnPickle.TabIndex = 1;
             this.btnPickle.Text = "Pickles";
             this.btnPickle.UseVisualStyleBackColor = true;
@@ -415,10 +417,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(270, 17);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(204, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 24);
+            this.label5.Size = new System.Drawing.Size(287, 39);
             this.label5.TabIndex = 0;
             this.label5.Text = "Choose Toppings";
             // 
@@ -431,15 +433,15 @@
             this.pnlSauce.Controls.Add(this.label6);
             this.pnlSauce.Location = new System.Drawing.Point(152, 118);
             this.pnlSauce.Name = "pnlSauce";
-            this.pnlSauce.Size = new System.Drawing.Size(741, 265);
+            this.pnlSauce.Size = new System.Drawing.Size(756, 271);
             this.pnlSauce.TabIndex = 1;
             this.pnlSauce.VisibleChanged += new System.EventHandler(this.pnlSauce_VisibleChanged);
             // 
             // btnSpecialSauce
             // 
-            this.btnSpecialSauce.Location = new System.Drawing.Point(451, 109);
+            this.btnSpecialSauce.Location = new System.Drawing.Point(484, 111);
             this.btnSpecialSauce.Name = "btnSpecialSauce";
-            this.btnSpecialSauce.Size = new System.Drawing.Size(94, 23);
+            this.btnSpecialSauce.Size = new System.Drawing.Size(75, 64);
             this.btnSpecialSauce.TabIndex = 4;
             this.btnSpecialSauce.Text = "Special Sauce";
             this.btnSpecialSauce.UseVisualStyleBackColor = true;
@@ -447,9 +449,9 @@
             // 
             // btnMayo
             // 
-            this.btnMayo.Location = new System.Drawing.Point(321, 111);
+            this.btnMayo.Location = new System.Drawing.Point(356, 111);
             this.btnMayo.Name = "btnMayo";
-            this.btnMayo.Size = new System.Drawing.Size(75, 23);
+            this.btnMayo.Size = new System.Drawing.Size(75, 64);
             this.btnMayo.TabIndex = 3;
             this.btnMayo.Text = "Mayo";
             this.btnMayo.UseVisualStyleBackColor = true;
@@ -457,9 +459,9 @@
             // 
             // btnMustard
             // 
-            this.btnMustard.Location = new System.Drawing.Point(195, 111);
+            this.btnMustard.Location = new System.Drawing.Point(224, 111);
             this.btnMustard.Name = "btnMustard";
-            this.btnMustard.Size = new System.Drawing.Size(75, 23);
+            this.btnMustard.Size = new System.Drawing.Size(75, 64);
             this.btnMustard.TabIndex = 2;
             this.btnMustard.Text = "Mustard";
             this.btnMustard.UseVisualStyleBackColor = true;
@@ -467,9 +469,9 @@
             // 
             // btnKetchup
             // 
-            this.btnKetchup.Location = new System.Drawing.Point(87, 111);
+            this.btnKetchup.Location = new System.Drawing.Point(103, 111);
             this.btnKetchup.Name = "btnKetchup";
-            this.btnKetchup.Size = new System.Drawing.Size(75, 23);
+            this.btnKetchup.Size = new System.Drawing.Size(75, 64);
             this.btnKetchup.TabIndex = 1;
             this.btnKetchup.Text = "Ketchup";
             this.btnKetchup.UseVisualStyleBackColor = true;
@@ -478,10 +480,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(261, 18);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(204, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 24);
+            this.label6.Size = new System.Drawing.Size(243, 39);
             this.label6.TabIndex = 0;
             this.label6.Text = "Choose Sauce";
             // 
@@ -518,7 +520,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(249, 78);
+            this.label11.Location = new System.Drawing.Point(249, 68);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(198, 24);
             this.label11.TabIndex = 3;
@@ -526,7 +528,8 @@
             // 
             // btnSumNo
             // 
-            this.btnSumNo.Location = new System.Drawing.Point(467, 152);
+            this.btnSumNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSumNo.Location = new System.Drawing.Point(356, 111);
             this.btnSumNo.Name = "btnSumNo";
             this.btnSumNo.Size = new System.Drawing.Size(92, 67);
             this.btnSumNo.TabIndex = 2;
@@ -535,9 +538,10 @@
             // 
             // btnSumYes
             // 
-            this.btnSumYes.Location = new System.Drawing.Point(143, 152);
+            this.btnSumYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSumYes.Location = new System.Drawing.Point(224, 111);
             this.btnSumYes.Name = "btnSumYes";
-            this.btnSumYes.Size = new System.Drawing.Size(89, 70);
+            this.btnSumYes.Size = new System.Drawing.Size(92, 67);
             this.btnSumYes.TabIndex = 1;
             this.btnSumYes.Text = "Yes";
             this.btnSumYes.UseVisualStyleBackColor = true;
@@ -546,7 +550,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(236, 30);
+            this.label8.Location = new System.Drawing.Point(236, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(245, 37);
             this.label8.TabIndex = 0;
@@ -583,20 +587,22 @@
             // lblStack
             // 
             this.lblStack.AutoSize = true;
-            this.lblStack.Location = new System.Drawing.Point(41, 77);
+            this.lblStack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStack.Location = new System.Drawing.Point(3, 55);
             this.lblStack.Name = "lblStack";
-            this.lblStack.Size = new System.Drawing.Size(39, 13);
+            this.lblStack.Size = new System.Drawing.Size(55, 20);
             this.lblStack.TabIndex = 1;
             this.lblStack.Text = "[stack]";
             // 
             // lblOrder
             // 
             this.lblOrder.AutoSize = true;
-            this.lblOrder.Location = new System.Drawing.Point(38, 31);
+            this.lblOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrder.Location = new System.Drawing.Point(3, 18);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(58, 13);
+            this.lblOrder.Size = new System.Drawing.Size(120, 20);
             this.lblOrder.TabIndex = 0;
-            this.lblOrder.Text = "Your Order";
+            this.lblOrder.Text = "Order Summary";
             // 
             // pnlBuild
             // 
@@ -604,12 +610,13 @@
             this.pnlBuild.Controls.Add(this.label10);
             this.pnlBuild.Location = new System.Drawing.Point(152, 118);
             this.pnlBuild.Name = "pnlBuild";
-            this.pnlBuild.Size = new System.Drawing.Size(756, 274);
+            this.pnlBuild.Size = new System.Drawing.Size(756, 271);
             this.pnlBuild.TabIndex = 1;
             // 
             // btnBuildStart
             // 
-            this.btnBuildStart.Location = new System.Drawing.Point(281, 116);
+            this.btnBuildStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuildStart.Location = new System.Drawing.Point(296, 131);
             this.btnBuildStart.Name = "btnBuildStart";
             this.btnBuildStart.Size = new System.Drawing.Size(139, 66);
             this.btnBuildStart.TabIndex = 1;
@@ -620,10 +627,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(249, 30);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(191, 47);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(210, 24);
+            this.label10.Size = new System.Drawing.Size(384, 39);
             this.label10.TabIndex = 0;
             this.label10.Text = "Build your custom order";
             // 
@@ -641,32 +648,32 @@
             // 
             // btnNavSauce
             // 
-            this.btnNavSauce.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavSauce.Location = new System.Drawing.Point(693, 18);
+            this.btnNavSauce.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavSauce.Location = new System.Drawing.Point(676, 18);
             this.btnNavSauce.Name = "btnNavSauce";
-            this.btnNavSauce.Size = new System.Drawing.Size(109, 66);
+            this.btnNavSauce.Size = new System.Drawing.Size(102, 63);
             this.btnNavSauce.TabIndex = 3;
-            this.btnNavSauce.Text = "S";
+            this.btnNavSauce.Text = "Sauce";
             this.btnNavSauce.UseVisualStyleBackColor = true;
             this.btnNavSauce.Click += new System.EventHandler(this.btnNavSauce_Click);
             // 
             // btnNavToppings
             // 
-            this.btnNavToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavToppings.Location = new System.Drawing.Point(461, 22);
+            this.btnNavToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavToppings.Location = new System.Drawing.Point(490, 18);
             this.btnNavToppings.Name = "btnNavToppings";
-            this.btnNavToppings.Size = new System.Drawing.Size(100, 63);
+            this.btnNavToppings.Size = new System.Drawing.Size(102, 63);
             this.btnNavToppings.TabIndex = 2;
-            this.btnNavToppings.Text = "T";
+            this.btnNavToppings.Text = "Toppings";
             this.btnNavToppings.UseVisualStyleBackColor = true;
             this.btnNavToppings.Click += new System.EventHandler(this.btnNavToppings_Click);
             // 
             // btnNavCheese
             // 
             this.btnNavCheese.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavCheese.Location = new System.Drawing.Point(243, 22);
+            this.btnNavCheese.Location = new System.Drawing.Point(325, 18);
             this.btnNavCheese.Name = "btnNavCheese";
-            this.btnNavCheese.Size = new System.Drawing.Size(103, 63);
+            this.btnNavCheese.Size = new System.Drawing.Size(102, 63);
             this.btnNavCheese.TabIndex = 1;
             this.btnNavCheese.Text = "Cheese";
             this.btnNavCheese.UseVisualStyleBackColor = true;
@@ -675,7 +682,7 @@
             // btnNavBun
             // 
             this.btnNavBun.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavBun.Location = new System.Drawing.Point(60, 20);
+            this.btnNavBun.Location = new System.Drawing.Point(164, 18);
             this.btnNavBun.Name = "btnNavBun";
             this.btnNavBun.Size = new System.Drawing.Size(102, 63);
             this.btnNavBun.TabIndex = 0;
@@ -688,15 +695,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 653);
+            this.Controls.Add(this.pnlSummary);
+            this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlOrderType);
+            this.Controls.Add(this.pnlCheese);
             this.Controls.Add(this.pnlBuild);
+            this.Controls.Add(this.pnlStart);
             this.Controls.Add(this.pnlSauce);
             this.Controls.Add(this.pnlToppings);
-            this.Controls.Add(this.pnlCheese);
             this.Controls.Add(this.pnlBun);
-            this.Controls.Add(this.pnlLocation);
-            this.Controls.Add(this.pnlStart);
-            this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlStack);
             this.Controls.Add(this.pnlPreviousNext);
             this.Controls.Add(this.pnlNav);
