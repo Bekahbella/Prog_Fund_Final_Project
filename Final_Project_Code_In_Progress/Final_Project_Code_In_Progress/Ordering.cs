@@ -113,7 +113,7 @@ namespace Final_Project_Code_In_Progress
             }
         }
 
-        private void pnCheese_VisibleChanged(object sender, EventArgs e)
+        private void pnlCheese_VisibleChanged(object sender, EventArgs e)
         {
 
             if (pnlCheese.Visible == true)
@@ -203,7 +203,7 @@ namespace Final_Project_Code_In_Progress
         private void btnBuild_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
-            //pnlBun.Visible = true;
+            pnlBun.Visible = true;
             pnlBuild.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
@@ -279,19 +279,20 @@ namespace Final_Project_Code_In_Progress
                 case "build":
 
                 pnlBuild.Visible = false; //want to move to next panel, needs to go away
-
                 pnlBun.Visible = true; //next panel moving to ...want to make visible
                 break;
 
                 case "bun":
-
+                //MessageBox.Show("Test");
                 pnlBun.Visible = false;//pnl you are on
+                btnNext.Enabled = false;
                 pnlCheese.Visible = true;//pnl you are moving to
                 break;
 
                 case "cheese":
                 pnlCheese.Visible = false;//pnl you are on
                 pnlToppings.Visible = true;//pnly you are moving to
+                //btnPrev.Visible = true;
                 break;
 
                 case "toppings":
