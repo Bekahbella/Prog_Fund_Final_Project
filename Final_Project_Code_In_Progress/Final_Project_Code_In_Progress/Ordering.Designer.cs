@@ -536,6 +536,7 @@
             this.btnSumNo.TabIndex = 2;
             this.btnSumNo.Text = "No";
             this.btnSumNo.UseVisualStyleBackColor = true;
+            this.btnSumNo.Click += new System.EventHandler(this.btnSumNo_Click);
             // 
             // btnSumYes
             // 

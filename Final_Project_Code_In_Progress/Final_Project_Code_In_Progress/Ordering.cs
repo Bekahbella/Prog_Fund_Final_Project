@@ -248,11 +248,8 @@ namespace Final_Project_Code_In_Progress
         private void btnIn_Click(object sender, EventArgs e)
         {
             takeOut = false;
-
             pnlLocation.Visible = false;
-
             pnlOrderType.Visible = true;
-
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
@@ -263,11 +260,8 @@ namespace Final_Project_Code_In_Progress
         {
 
             takeOut = true;
-
             pnlLocation.Visible = false;
-
             pnlOrderType.Visible = true;
-
             pnlPreviousNext.Visible = true;
         }
 
@@ -607,6 +601,13 @@ namespace Final_Project_Code_In_Progress
         {
 
         }
+
+        private void btnSumNo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
     }
