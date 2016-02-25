@@ -515,6 +515,7 @@
             this.pnlSummary.Name = "pnlSummary";
             this.pnlSummary.Size = new System.Drawing.Size(750, 265);
             this.pnlSummary.TabIndex = 1;
+            this.pnlSummary.VisibleChanged += new System.EventHandler(this.pnlSummary_VisibleChanged);
             // 
             // label11
             // 
@@ -545,6 +546,7 @@
             this.btnSumYes.TabIndex = 1;
             this.btnSumYes.Text = "Yes";
             this.btnSumYes.UseVisualStyleBackColor = true;
+            this.btnSumYes.Click += new System.EventHandler(this.btnSumYes_Click);
             // 
             // label8
             // 
@@ -563,12 +565,13 @@
             this.pnlComplete.Name = "pnlComplete";
             this.pnlComplete.Size = new System.Drawing.Size(756, 332);
             this.pnlComplete.TabIndex = 1;
+            this.pnlComplete.VisibleChanged += new System.EventHandler(this.pnlComplete_VisibleChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(49, 55);
+            this.label9.Location = new System.Drawing.Point(236, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(190, 24);
             this.label9.TabIndex = 0;
@@ -696,8 +699,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 653);
             this.Controls.Add(this.pnlSummary);
-            this.Controls.Add(this.pnlLocation);
+            this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlOrderType);
+            this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlCheese);
             this.Controls.Add(this.pnlBuild);
             this.Controls.Add(this.pnlStart);
@@ -707,7 +711,6 @@
             this.Controls.Add(this.pnlStack);
             this.Controls.Add(this.pnlPreviousNext);
             this.Controls.Add(this.pnlNav);
-            this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlSpecialty);
             this.Name = "Ordering";
             this.Text = "Form1";

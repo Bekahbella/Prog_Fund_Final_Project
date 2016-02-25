@@ -160,6 +160,25 @@ namespace Final_Project_Code_In_Progress
             }
         }
 
+        private void pnlSummary_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlSummary.Visible == true)
+            {
+                orderStep = "Summary";
+            }
+        }
+
+        private void pnlComplete_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlComplete.Visible == true)
+            {
+                orderStep = "Complete";
+            }
+
+        }
+
+
+
         //Button Click Events
 
         //pnl 1 Start button clicks
@@ -203,7 +222,7 @@ namespace Final_Project_Code_In_Progress
         private void btnBuild_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
-            pnlBun.Visible = true;
+            //pnlBun.Visible = true;
             pnlBuild.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
@@ -224,7 +243,7 @@ namespace Final_Project_Code_In_Progress
 
 
 
-        //pnl Nav button clicks
+        //pnl Prev Next button clicks
         private void btnPrev_Click(object sender, EventArgs e)
         {
 
@@ -357,8 +376,8 @@ namespace Final_Project_Code_In_Progress
             btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
             btnPrev.Enabled = true;
         }
-
-        //panel cheese button click start
+    
+       //panel cheese button click start
         
         private void btnAmerican_Click(object sender, EventArgs e)
         {
@@ -476,8 +495,8 @@ namespace Final_Project_Code_In_Progress
 
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
-        {
-            
+   
+        { 
             pnlBun.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -508,10 +527,10 @@ namespace Final_Project_Code_In_Progress
             pnlStack.Visible = true;
         }
 
+        private void btnSumYes_Click(object sender, EventArgs e)
+        {
 
-
-
-
+        }
 
 
     }
