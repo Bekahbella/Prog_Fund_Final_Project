@@ -700,6 +700,7 @@
             this.ClientSize = new System.Drawing.Size(1247, 653);
             this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlComplete);
+            this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlOrderType);
             this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlCheese);
@@ -710,7 +711,6 @@
             this.Controls.Add(this.pnlBun);
             this.Controls.Add(this.pnlStack);
             this.Controls.Add(this.pnlPreviousNext);
-            this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlSpecialty);
             this.Name = "Ordering";
             this.Text = "Form1";

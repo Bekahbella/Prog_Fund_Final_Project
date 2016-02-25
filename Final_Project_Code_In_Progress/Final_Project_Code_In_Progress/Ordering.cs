@@ -49,6 +49,11 @@ namespace Final_Project_Code_In_Progress
             pnlComplete.Visible = false;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
+            btnNavBun.Enabled = false;
+            btnNavCheese.Enabled = false;
+            btnNavToppings.Enabled = false;
+            btnNavSauce.Enabled = false;
+            
 
             lblStack.Text = "";
 
@@ -64,6 +69,10 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "start";
             }
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
 
         }
 
@@ -74,6 +83,12 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "location";
             }
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
+            btnPrev.Enabled = true;
+            btnNext.Visible = true;
 
         }
 
@@ -83,6 +98,13 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "ordertype";
             }
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
+            btnPrev.Enabled = true;
+            btnNext.Visible = true;
+
         }
     
 
@@ -95,7 +117,14 @@ namespace Final_Project_Code_In_Progress
                 
             }
 
-            btnNext.Visible = false;
+            btnNext.Visible = true;
+            btnPrev.Enabled = true;
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
+
+            
         }
 
 
@@ -108,6 +137,11 @@ namespace Final_Project_Code_In_Progress
 
                 if (optionsArray[0] == "") //if array position 0 is equal to an empty array do parenthesis
                 {
+                    btnNavBun.Enabled = true;
+                    btnNavCheese.Enabled = true;
+                    btnNavToppings.Enabled = true;
+                    btnNavSauce.Enabled = true;
+                    btnPrev.Enabled = true;
                     btnNext.Enabled = true; //continue button will be enabled
                 }
             }
@@ -122,8 +156,12 @@ namespace Final_Project_Code_In_Progress
                 btnNext.Enabled = false; //must select type before moving on
                 if (optionsArray[1] == "")
                 {
-                    btnNext.Enabled = true;
+                    btnNavBun.Enabled = true;
+                    btnNavCheese.Enabled = true;
+                    btnNavToppings.Enabled = true;
+                    btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
+                    btnNext.Enabled = true;
                 }
                 
             }
@@ -137,8 +175,12 @@ namespace Final_Project_Code_In_Progress
                 btnNext.Enabled = false; //must select type before moving on
                 if (optionsArray[2] == "")
                 {
-                    btnNext.Enabled = true;
+                    btnNavBun.Enabled = true;
+                    btnNavCheese.Enabled = true;
+                    btnNavToppings.Enabled = true;
+                    btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
+                    btnNext.Enabled = true;
                 }
 
             }
@@ -153,8 +195,12 @@ namespace Final_Project_Code_In_Progress
                 btnNext.Enabled = false; //must select type before moving on
                 if (optionsArray[3] == "")
                 {
-                    btnNext.Enabled = true;
+                    btnNavBun.Enabled = true;
+                    btnNavCheese.Enabled = true;
+                    btnNavToppings.Enabled = true;
+                    btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
+                    btnNext.Enabled = true;
                 }
 
             }
@@ -166,6 +212,12 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "Summary";
             }
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
+            btnPrev.Enabled = true;
+            btnNext.Enabled = true;
         }
 
         private void pnlComplete_VisibleChanged(object sender, EventArgs e)
@@ -189,6 +241,7 @@ namespace Final_Project_Code_In_Progress
             pnlNav.Visible = true;
             pnlStack.Visible = true;
             pnlPreviousNext.Visible = true;
+           
         }
 
         //pnl 2 Location button clicks
@@ -250,37 +303,45 @@ namespace Final_Project_Code_In_Progress
             switch (orderStep) //evaluates variable of orderStep and runs case statement where I am currently at I want to go back a page....for prev next
             {
 
+                case "location":
+                    pnlStart.Visible = true;//on button click move to panel previous to location panel
+                    pnlLocation.Visible = false;//on button click make current panel go away
+                    break;
+                    
                 case "ordertype":
                     pnlOrderType.Visible = false;
                     pnlLocation.Visible = true;
                     break;
                 
                 case "build":
-                    pnlBun.Visible = false;
-                    pnlBuild.Visible = true;
+                    pnlOrderType.Visible = true;
+                    pnlBuild.Visible = false;
                     break;
 
-                case "bun": //want to move to bun from cheese
-                    pnlCheese.Visible = false; //current panel, needs to go away and move backwards
-                    pnlBun.Visible = true; //needs to become visible when clicking prev button
+                case "bun": 
+                    pnlBuild.Visible = true; //on button click move to panel previous to bun panel
+                    pnlBun.Visible = false; //on button click make current panel go away
                     break;
                 
                 case "cheese":
-                    pnlToppings.Visible = false;
-                    pnlCheese.Visible = true;
+                    pnlBun.Visible = true;
+                    pnlCheese.Visible = false;
                     break;
 
                 case "toppings": //want to move to bun from cheese
-                    pnlCheese.Visible = false; //current panel, needs to go away and move backwards
-                    pnlToppings.Visible = true; //needs to become visible when clicking prev button
+                    pnlCheese.Visible = true; 
+                    pnlToppings.Visible = false;
                     break;
 
                 case "sauce":
-                    pnlToppings.Visible = false; //current panel, needs to go away and move backwards
-                    pnlSauce.Visible = true; //needs to become visible when clicking prev button
+                    pnlToppings.Visible = true; //current panel, needs to go away and move backwards
+                    pnlSauce.Visible = false; //needs to become visible when clicking prev button
                     break;
-
-
+                case "summary":
+                    pnlSauce.Visible = true;
+                    pnlSummary.Visible = false;
+                    break;
+                    
 
                 default:
                     pnlStart.Visible = true;
@@ -294,41 +355,52 @@ namespace Final_Project_Code_In_Progress
         {
             switch (orderStep)
             {
+                case "location":
+                    pnlOrderType.Visible = true;
+                    pnlLocation.Visible = false;
+                    break;
+                case "orderType":
+                    pnlBuild.Visible = true;
+                    pnlOrderType.Visible = false;
+                    break;
 
                 case "build":
-
-                pnlBuild.Visible = false; //want to move to next panel, needs to go away
-                pnlBun.Visible = true; //next panel moving to ...want to make visible
-                break;
+                    pnlBuild.Visible = false; //pnl you are on
+                    pnlBun.Visible = true; //next panel moving to ...want to make visible
+                    break;
 
                 case "bun":
                 //MessageBox.Show("Test");
-                pnlBun.Visible = false;//pnl you are on
-                btnNext.Enabled = false;
-                pnlCheese.Visible = true;//pnl you are moving to
-                break;
+                    pnlBun.Visible = false;//pnl you are on
+                    btnNext.Enabled = false;
+                    pnlCheese.Visible = true;//pnl you are moving to
+                    break;
 
                 case "cheese":
-                pnlCheese.Visible = false;//pnl you are on
-                pnlToppings.Visible = true;//pnly you are moving to
+                    pnlCheese.Visible = false;
+                    pnlToppings.Visible = true;
                 //btnPrev.Visible = true;
-                break;
+                    break;
 
                 case "toppings":
-                pnlToppings.Visible = false;//pnl you are on 
-                pnlSauce.Visible = true;//pnl you are moving to
-                break;
+                    pnlToppings.Visible = false;
+                    pnlSauce.Visible = true;
+                    break;
 
                 case "sauce":
-                pnlSauce.Visible = false;//pnl you are on
-                pnlSummary.Visible = true;//pnl yo uare moving to
-                break;
+                    pnlSauce.Visible = false;
+                    pnlSummary.Visible = true;
+                    break;
+                
+                case "summary":
+                    pnlSummary.Visible = false;
+                    pnlComplete.Visible = true;
+                    break;
 
 
                 default:
-                pnlStart.Visible = true;
-
-                break;
+                    pnlStart.Visible = true;
+                    break;
 
             }
 
@@ -344,6 +416,10 @@ namespace Final_Project_Code_In_Progress
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
         }
 
 
