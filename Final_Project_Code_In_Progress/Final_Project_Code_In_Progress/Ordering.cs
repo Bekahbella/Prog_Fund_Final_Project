@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace Final_Project_Code_In_Progress
 {
     public partial class Ordering : Form
@@ -20,7 +21,7 @@ namespace Final_Project_Code_In_Progress
         
         string [] toppings = new string[] {};
         string [] sauce = new string[] {};
-        string [] optionsArray = new string [4];
+        public string [] optionsArray = new string [4];
         string bunType;
         string cheeseType;
 
@@ -274,8 +275,6 @@ namespace Final_Project_Code_In_Progress
             pnlNav.Visible = true;
             pnlStack.Visible = true;
             pnlPreviousNext.Visible = true;
-
-
         }
 
         private void btnSpecialty_Click(object sender, EventArgs e)
@@ -284,11 +283,7 @@ namespace Final_Project_Code_In_Progress
             pnlNav.Visible = true;
             pnlStack.Visible = true;
             pnlPreviousNext.Visible = true;
-
-
         }
-
-
 
         //pnl Prev Next button clicks
         private void btnPrev_Click(object sender, EventArgs e)
@@ -341,8 +336,6 @@ namespace Final_Project_Code_In_Progress
                     pnlStart.Visible = true;
                     break;
             }
-
-
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -420,147 +413,185 @@ namespace Final_Project_Code_In_Progress
         //Bun panel button click start
         private void btnBun1_Click(object sender, EventArgs e)
         {
-            optionsArray[0] = "whiteBun\n";
-            lblStack.Text = optionsArray[0];
+            //optionsArray[0] = "whiteBun\n";
+            //lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string bunType = Bun.createBun("whiteBun\n");
+            optionsArray[0] = bunType;
+            buildOptions();
+            //lblStack.Text = optionsArray[0];//setting label stack text to options array
+
         }
 
-        
-        
-        
         private void btnBun2_Click(object sender, EventArgs e)
         {
-            optionsArray[0] = "wheatBun\n";
-            lblStack.Text = optionsArray[0];
+            //optionsArray[0] = "wheatBun\n";
+            //lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string bunType = Bun.createBun("wheatBun\n");
+            optionsArray[0] = bunType;
+            buildOptions();
+            //lblStack.Text = optionsArray[0];//setting label stack text to options array
         }
 
-        
-        
         private void btnBun3_Click(object sender, EventArgs e)
         {
-            optionsArray[0] = "potatoBun\n";
-            lblStack.Text = optionsArray[0];
+            //optionsArray[0] = "potatoBun\n";
+            //lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
             btnPrev.Enabled = true;
+            string bunType = Bun.createBun("potatoBun\n");
+            optionsArray[0] = bunType;
+            buildOptions();
+            //lblStack.Text = optionsArray[0];//setting label stack text to options array
         }
     
        //panel cheese button click start
         
         private void btnAmerican_Click(object sender, EventArgs e)
         {
-            optionsArray[1] = "americanCheese\n";
-            lblStack.Text += optionsArray[1];
+            //optionsArray[1] = "americanCheese\n";
+            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+
+            string cheeseType = Cheese.createCheese("American\n");
+            optionsArray[1] = cheeseType;
+            buildOptions();
+            //lblStack.Text += optionsArray[1];//setting label stack text to options array
         }
 
-        
-        
         private void btnCheddar_Click(object sender, EventArgs e)
         {
-
-            optionsArray[1] = "cheddarCheese\n";
-            lblStack.Text += optionsArray[1];
+            //optionsArray[1] = "cheddarCheese\n";
+            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-
-
+            string cheeseType = Cheese.createCheese("Cheddar\n");
+            optionsArray[1] = cheeseType;
+            lblStack.Text += optionsArray[1];//setting label stack text to options array
         }
-
-       
-        
         private void btnSwiss_Click(object sender, EventArgs e)
-
         {
-            optionsArray[1] = "swissCheese\n";
-            lblStack.Text += optionsArray[1];
+            //optionsArray[1] = "swissCheese\n";
+            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string cheeseType = Cheese.createCheese("Swiss\n");
+            optionsArray[1] = cheeseType;
+            lblStack.Text += optionsArray[1];//setting label stack text to options array
         }
 
-        
-        
         private void btnNoCheese_Click(object sender, EventArgs e)
 
         {
-            optionsArray[1] = "noCheese\n";
-            lblStack.Text += optionsArray[1];
+            //optionsArray[1] = "noCheese\n";
+            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-        
-
+            string cheeseType = Cheese.createCheese("NoCheese\n");
+            optionsArray[1] = cheeseType;
+            lblStack.Text += optionsArray[1];//setting label stack text to options array
         }
 
-        
-        
-        //Toppings Panel button click start
+         //Toppings Panel button click start
         private void btnPickle_Click(object sender, EventArgs e)
         {
-            optionsArray[2] = "Pickle\n";
-            lblStack.Text += optionsArray[2];
+            //optionsArray[2] = "Pickle\n";
+            //lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string ToppingType = Toppings.createToppings("Pickle\n");
+            optionsArray[2] = ToppingType;
+            lblStack.Text += optionsArray[2];//setting label stack text to options array
         }
-
         private void btnTomato_Click(object sender, EventArgs e)
         {
-            optionsArray[2] = "Tomato\n";
-            lblStack.Text += optionsArray[2];
+            //optionsArray[2] = "Tomato\n";
+           // lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-
+            string ToppingType = Toppings.createToppings("Tomato\n");
+            optionsArray[2] = ToppingType;
+            lblStack.Text += optionsArray[2];//setting label stack text to options array
         }
 
         private void btnOnion_Click(object sender, EventArgs e)
         {
-            optionsArray[2] = "Onion\n";
-            lblStack.Text += optionsArray[2];
+            //optionsArray[2] = "Onion\n";
+            //lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string ToppingType = Toppings.createToppings("Onion\n");
+            optionsArray[2] = ToppingType;
+            lblStack.Text += optionsArray[2];//setting label stack text to options array
         }
 
         private void btnLettuce_Click(object sender, EventArgs e)
         {
-            optionsArray[2] = "Lettuce\n";
-            lblStack.Text += optionsArray[2];
+            //optionsArray[2] = "Lettuce\n";
+            //lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string ToppingType = Toppings.createToppings("Lettuce\n");
+            optionsArray[2] = ToppingType;
+            lblStack.Text += optionsArray[2];//setting label stack text to options array
         }
+
+        
         //sauce panel button click start
 
         private void btnKetchup_Click(object sender, EventArgs e)
         {
-            optionsArray[3] = "Ketchup\n";
-            lblStack.Text += optionsArray[3];
+            //optionsArray[3] = "Ketchup\n";
+            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string SauceType = Sauce.createSauce("Ketchup\n");
+            optionsArray[3] = SauceType;
+            lblStack.Text += optionsArray[3];//setting label stack text to options array
         }
 
         private void btnMustard_Click(object sender, EventArgs e)
         {
-            optionsArray[3] = "Mustard\n";
-            lblStack.Text += optionsArray[3];
+            //optionsArray[3] = "Mustard\n";
+            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string SauceType = Sauce.createSauce("Mustard\n");
+            optionsArray[3] = SauceType;
+            lblStack.Text += optionsArray[3];//setting label stack text to options array
         }
 
         private void btnMayo_Click(object sender, EventArgs e)
         {
-            optionsArray[3] = "Mayo\n";
-            lblStack.Text += optionsArray[3];
+            //optionsArray[3] = "Mayo\n";
+            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string SauceType = Sauce.createSauce("Mayo\n");
+            optionsArray[3] = SauceType;
+            buildOptions();
+            //lblStack.Text += optionsArray[3];//setting label stack text to options array
         }
 
         private void btnSpecialSauce_Click(object sender, EventArgs e)
         {
-            optionsArray[3] = "SpecialSauce\n";
-            lblStack.Text += optionsArray[3];
+            //optionsArray[3] = "SpecialSauce\n";
+            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
+            string SauceType = Sauce.createSauce("SpecialSauce");
+            optionsArray[3] = SauceType;
+            buildOptions();//calling method that builds stack when selection is made
+            //lblStack.Text += optionsArray[3];//setting label stack text to options array
+        }
+
+        private void buildOptions() //method to build the stack 
+        {
+            lblStack.Text = string.Join("\n", optionsArray);
         }
 
       //Panel Top Nav Button Clicks

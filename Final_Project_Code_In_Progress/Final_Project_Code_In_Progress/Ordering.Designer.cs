@@ -66,6 +66,7 @@
             this.btnKetchup = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlSpecialty = new System.Windows.Forms.Panel();
+            this.btnSpec1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlSummary = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -85,6 +86,7 @@
             this.btnNavToppings = new System.Windows.Forms.Button();
             this.btnNavCheese = new System.Windows.Forms.Button();
             this.btnNavBun = new System.Windows.Forms.Button();
+            this.btnSpec2 = new System.Windows.Forms.Button();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -489,19 +491,30 @@
             // 
             // pnlSpecialty
             // 
+            this.pnlSpecialty.Controls.Add(this.btnSpec2);
+            this.pnlSpecialty.Controls.Add(this.btnSpec1);
             this.pnlSpecialty.Controls.Add(this.label7);
             this.pnlSpecialty.Location = new System.Drawing.Point(152, 118);
             this.pnlSpecialty.Name = "pnlSpecialty";
             this.pnlSpecialty.Size = new System.Drawing.Size(756, 329);
             this.pnlSpecialty.TabIndex = 1;
             // 
+            // btnSpec1
+            // 
+            this.btnSpec1.Location = new System.Drawing.Point(224, 111);
+            this.btnSpec1.Name = "btnSpec1";
+            this.btnSpec1.Size = new System.Drawing.Size(115, 76);
+            this.btnSpec1.TabIndex = 1;
+            this.btnSpec1.Text = "button1";
+            this.btnSpec1.UseVisualStyleBackColor = true;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(50, 44);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(204, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 24);
+            this.label7.Size = new System.Drawing.Size(290, 39);
             this.label7.TabIndex = 0;
             this.label7.Text = "Specialty Burgers";
             // 
@@ -694,15 +707,25 @@
             this.btnNavBun.UseVisualStyleBackColor = true;
             this.btnNavBun.Click += new System.EventHandler(this.btnNavBun_Click);
             // 
+            // btnSpec2
+            // 
+            this.btnSpec2.Location = new System.Drawing.Point(356, 111);
+            this.btnSpec2.Name = "btnSpec2";
+            this.btnSpec2.Size = new System.Drawing.Size(115, 76);
+            this.btnSpec2.TabIndex = 2;
+            this.btnSpec2.Text = "button1";
+            this.btnSpec2.UseVisualStyleBackColor = true;
+            // 
             // Ordering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 653);
+            this.Controls.Add(this.pnlSpecialty);
+            this.Controls.Add(this.pnlOrderType);
             this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlNav);
-            this.Controls.Add(this.pnlOrderType);
             this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlCheese);
             this.Controls.Add(this.pnlBuild);
@@ -712,7 +735,6 @@
             this.Controls.Add(this.pnlBun);
             this.Controls.Add(this.pnlStack);
             this.Controls.Add(this.pnlPreviousNext);
-            this.Controls.Add(this.pnlSpecialty);
             this.Name = "Ordering";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -805,6 +827,8 @@
         private System.Windows.Forms.Label lblOrder;
         private System.Windows.Forms.Button btnNoCheese;
         private System.Windows.Forms.Button btnLettuce;
+        private System.Windows.Forms.Button btnSpec1;
+        private System.Windows.Forms.Button btnSpec2;
     }
 }
 
