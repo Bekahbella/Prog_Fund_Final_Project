@@ -250,7 +250,12 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "Complete";
             }
-
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
+            btnPrev.Enabled = true;
+            btnNext.Enabled = false;
         }
 
 
@@ -361,6 +366,10 @@ namespace Final_Project_Code_In_Progress
                 case "summary":
                     pnlSauce.Visible = true;
                     pnlSummary.Visible = false;
+                    break;
+                case "complete":
+                    pnlComplete.Visible = false;
+                    pnlSummary.Visible = true;
                     break;
                     
 
@@ -648,7 +657,11 @@ namespace Final_Project_Code_In_Progress
    
         {
             //navBun = true;
-            pnlBun.Visible = true;
+            if (navBun == true)
+            {
+                pnlBun.Visible = true;
+            }
+            //pnlBun.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
@@ -689,8 +702,7 @@ namespace Final_Project_Code_In_Progress
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
-            btnPrev.Enabled = false;
-            btnNext.Enabled = false;
+            
 
         }
 
@@ -702,17 +714,8 @@ namespace Final_Project_Code_In_Progress
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
-            btnPrev.Enabled = false;
-            btnNext.Enabled = false;
+            
         }
-
-       
-
-       
-       
-
-
-
 
     }
 }

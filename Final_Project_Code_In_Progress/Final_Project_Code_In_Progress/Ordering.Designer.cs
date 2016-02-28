@@ -592,7 +592,7 @@
             this.pnlComplete.Controls.Add(this.label9);
             this.pnlComplete.Location = new System.Drawing.Point(152, 118);
             this.pnlComplete.Name = "pnlComplete";
-            this.pnlComplete.Size = new System.Drawing.Size(756, 332);
+            this.pnlComplete.Size = new System.Drawing.Size(756, 271);
             this.pnlComplete.TabIndex = 1;
             this.pnlComplete.VisibleChanged += new System.EventHandler(this.pnlComplete_VisibleChanged);
             // 
