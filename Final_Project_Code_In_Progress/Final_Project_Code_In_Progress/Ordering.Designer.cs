@@ -66,6 +66,7 @@
             this.btnKetchup = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlSpecialty = new System.Windows.Forms.Panel();
+            this.btnSpec2 = new System.Windows.Forms.Button();
             this.btnSpec1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlSummary = new System.Windows.Forms.Panel();
@@ -86,7 +87,6 @@
             this.btnNavToppings = new System.Windows.Forms.Button();
             this.btnNavCheese = new System.Windows.Forms.Button();
             this.btnNavBun = new System.Windows.Forms.Button();
-            this.btnSpec2 = new System.Windows.Forms.Button();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -183,7 +183,7 @@
             this.pnlOrderType.Controls.Add(this.btnSpecialty);
             this.pnlOrderType.Location = new System.Drawing.Point(152, 118);
             this.pnlOrderType.Name = "pnlOrderType";
-            this.pnlOrderType.Size = new System.Drawing.Size(756, 271);
+            this.pnlOrderType.Size = new System.Drawing.Size(756, 262);
             this.pnlOrderType.TabIndex = 2;
             // 
             // btnBuild
@@ -216,6 +216,7 @@
             this.btnSpecialty.TabIndex = 1;
             this.btnSpecialty.Text = "Specialty";
             this.btnSpecialty.UseVisualStyleBackColor = true;
+            this.btnSpecialty.Click += new System.EventHandler(this.btnSpecialty_Click);
             // 
             // pnlPreviousNext
             // 
@@ -496,17 +497,31 @@
             this.pnlSpecialty.Controls.Add(this.label7);
             this.pnlSpecialty.Location = new System.Drawing.Point(152, 118);
             this.pnlSpecialty.Name = "pnlSpecialty";
-            this.pnlSpecialty.Size = new System.Drawing.Size(756, 329);
+            this.pnlSpecialty.Size = new System.Drawing.Size(756, 265);
             this.pnlSpecialty.TabIndex = 1;
+            this.pnlSpecialty.VisibleChanged += new System.EventHandler(this.pnlSpecialty_VisibleChanged);
+            // 
+            // btnSpec2
+            // 
+            this.btnSpec2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpec2.Location = new System.Drawing.Point(356, 111);
+            this.btnSpec2.Name = "btnSpec2";
+            this.btnSpec2.Size = new System.Drawing.Size(115, 76);
+            this.btnSpec2.TabIndex = 2;
+            this.btnSpec2.Text = "Royale With Cheese";
+            this.btnSpec2.UseVisualStyleBackColor = true;
+            this.btnSpec2.Click += new System.EventHandler(this.btnSpec2_Click);
             // 
             // btnSpec1
             // 
+            this.btnSpec1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpec1.Location = new System.Drawing.Point(224, 111);
             this.btnSpec1.Name = "btnSpec1";
             this.btnSpec1.Size = new System.Drawing.Size(115, 76);
             this.btnSpec1.TabIndex = 1;
-            this.btnSpec1.Text = "button1";
+            this.btnSpec1.Text = "Big Mac";
             this.btnSpec1.UseVisualStyleBackColor = true;
+            this.btnSpec1.Click += new System.EventHandler(this.btnSpec1_Click);
             // 
             // label7
             // 
@@ -584,12 +599,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(236, 18);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(187, 47);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(190, 24);
+            this.label9.Size = new System.Drawing.Size(318, 31);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Your Complete Order";
+            this.label9.Text = "Thank you for your order!";
             // 
             // pnlStack
             // 
@@ -707,24 +722,15 @@
             this.btnNavBun.UseVisualStyleBackColor = true;
             this.btnNavBun.Click += new System.EventHandler(this.btnNavBun_Click);
             // 
-            // btnSpec2
-            // 
-            this.btnSpec2.Location = new System.Drawing.Point(356, 111);
-            this.btnSpec2.Name = "btnSpec2";
-            this.btnSpec2.Size = new System.Drawing.Size(115, 76);
-            this.btnSpec2.TabIndex = 2;
-            this.btnSpec2.Text = "button1";
-            this.btnSpec2.UseVisualStyleBackColor = true;
-            // 
             // Ordering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 653);
-            this.Controls.Add(this.pnlSpecialty);
-            this.Controls.Add(this.pnlOrderType);
-            this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlComplete);
+            this.Controls.Add(this.pnlOrderType);
+            this.Controls.Add(this.pnlSpecialty);
+            this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlCheese);

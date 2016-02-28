@@ -15,15 +15,13 @@ namespace Final_Project_Code_In_Progress
         //Declarations
         bool takeOut;
         //string bunType = "";
-        int pattyNum;
         string orderStep; //keeps track of current pannel
 
         
         string [] toppings = new string[] {};
         string [] sauce = new string[] {};
-        public string [] optionsArray = new string [4];
-        string bunType;
-        string cheeseType;
+        public string [] optionsArray = new string [5];
+        
 
 
         public Ordering()
@@ -105,10 +103,29 @@ namespace Final_Project_Code_In_Progress
             btnNavSauce.Enabled = true;
             btnPrev.Enabled = true;
             btnNext.Visible = true;
+            btnSpecialty.Enabled = true;
+
+        }
+        private void pnlSpecialty_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlSpecialty.Visible == true)
+            {
+                orderStep = "specialty";
+            }
+            if (optionsArray[4] == "")
+            {
+                btnNavBun.Enabled = true;
+                btnNavCheese.Enabled = true;
+                btnNavToppings.Enabled = true;
+                btnNavSauce.Enabled = true;
+                btnPrev.Enabled = true;
+                btnNext.Visible = true;
+                
+
+            }
 
         }
     
-
         private void pnlBuild_VisibleChanged(object sender, EventArgs e)
         {
 
@@ -164,7 +181,7 @@ namespace Final_Project_Code_In_Progress
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
                 }
-                
+                 
             }
         }
 
@@ -232,6 +249,7 @@ namespace Final_Project_Code_In_Progress
 
 
 
+
         //Button Click Events
 
         //pnl 1 Start button clicks
@@ -280,9 +298,12 @@ namespace Final_Project_Code_In_Progress
         private void btnSpecialty_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
+            pnlSpecialty.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
             pnlPreviousNext.Visible = true;
+
+
         }
 
         //pnl Prev Next button clicks
@@ -300,6 +321,11 @@ namespace Final_Project_Code_In_Progress
                 case "ordertype":
                     pnlOrderType.Visible = false;
                     pnlLocation.Visible = true;
+                    break;
+
+                case "specialty":
+                    pnlSpecialty.Visible = false;
+                    pnlOrderType.Visible = true;
                     break;
                 
                 case "build":
@@ -350,12 +376,14 @@ namespace Final_Project_Code_In_Progress
                     pnlBuild.Visible = true;
                     pnlOrderType.Visible = false;
                     break;
-
                 case "build":
                     pnlBuild.Visible = false; //pnl you are on
                     pnlBun.Visible = true; //next panel moving to ...want to make visible
                     break;
-
+                case "specialty":
+                    pnlSpecialty.Visible = false;
+                    pnlSummary.Visible = true;
+                    break;
                 case "bun":
                 //MessageBox.Show("Test");
                     pnlBun.Visible = false;//pnl you are on
@@ -419,8 +447,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string bunType = Bun.createBun("whiteBun\n");
             optionsArray[0] = bunType;
-            buildOptions();
-            //lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStack.Text = optionsArray[0];//setting label stack text to options array
 
         }
 
@@ -432,8 +459,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string bunType = Bun.createBun("wheatBun\n");
             optionsArray[0] = bunType;
-            buildOptions();
-            //lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStack.Text = optionsArray[0];//setting label stack text to options array
         }
 
         private void btnBun3_Click(object sender, EventArgs e)
@@ -444,8 +470,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string bunType = Bun.createBun("potatoBun\n");
             optionsArray[0] = bunType;
-            buildOptions();
-            //lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStack.Text = optionsArray[0];//setting label stack text to options array
         }
     
        //panel cheese button click start
@@ -456,11 +481,9 @@ namespace Final_Project_Code_In_Progress
             //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-
             string cheeseType = Cheese.createCheese("American\n");
             optionsArray[1] = cheeseType;
-            buildOptions();
-            //lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStack.Text += optionsArray[1];//setting label stack text to options array
         }
 
         private void btnCheddar_Click(object sender, EventArgs e)
@@ -573,8 +596,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Mayo\n");
             optionsArray[3] = SauceType;
-            buildOptions();
-            //lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStack.Text += optionsArray[3];//setting label stack text to options array
         }
 
         private void btnSpecialSauce_Click(object sender, EventArgs e)
@@ -585,14 +607,35 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("SpecialSauce");
             optionsArray[3] = SauceType;
-            buildOptions();//calling method that builds stack when selection is made
-            //lblStack.Text += optionsArray[3];//setting label stack text to options array
+            //buildOptions();//calling method that builds stack when selection is made
+            lblStack.Text += optionsArray[3];//setting label stack text to options array
         }
 
-        private void buildOptions() //method to build the stack 
+        //Specialty Button Clicks
+
+        private void btnSpec1_Click(object sender, EventArgs e) //Big Mac
         {
-            lblStack.Text = string.Join("\n", optionsArray);
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+            optionsArray[4] = "Big Mac\n";
+            lblStack.Text += optionsArray[4];//setting label stack text to options array
         }
+
+        private void btnSpec2_Click(object sender, EventArgs e) //Royal with Cheese
+        {
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+            optionsArray[4] = "Royal With Cheese\n";
+            lblStack.Text += optionsArray[4];//setting label stack text to options array
+        }
+
+
+    
+
+        //private void buildOptions() //method to build the stack 
+        //{
+        //    lblStack.Text = string.Join("\n", optionsArray);
+        //}
 
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
@@ -630,13 +673,21 @@ namespace Final_Project_Code_In_Progress
 
         private void btnSumYes_Click(object sender, EventArgs e)
         {
+            btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
+            btnPrev.Enabled = true;
 
         }
 
         private void btnSumNo_Click(object sender, EventArgs e)
         {
-
+            btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
+            btnPrev.Enabled = true;
         }
+
+       
+
+       
+       
 
 
 
