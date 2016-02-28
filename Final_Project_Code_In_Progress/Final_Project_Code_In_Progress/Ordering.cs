@@ -14,8 +14,14 @@ namespace Final_Project_Code_In_Progress
     {
         //Declarations
         bool takeOut;
+        bool sumNo;
         //string bunType = "";
         string orderStep; //keeps track of current pannel
+        bool navSauce;
+        bool navTopping;
+        bool navCheese;
+        bool navBun;
+
 
         
         string [] toppings = new string[] {};
@@ -640,7 +646,8 @@ namespace Final_Project_Code_In_Progress
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
    
-        { 
+        {
+            //navBun = true;
             pnlBun.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -649,6 +656,7 @@ namespace Final_Project_Code_In_Progress
 
         private void btnNavCheese_Click(object sender, EventArgs e)
         {
+            //navCheese = true;
             pnlCheese.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -657,6 +665,7 @@ namespace Final_Project_Code_In_Progress
 
         private void btnNavToppings_Click(object sender, EventArgs e)
         {
+            //navTopping = true;
             pnlToppings.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -665,6 +674,7 @@ namespace Final_Project_Code_In_Progress
 
         private void btnNavSauce_Click(object sender, EventArgs e)
         {
+            //navSauce = true;
             pnlSauce.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -673,15 +683,27 @@ namespace Final_Project_Code_In_Progress
 
         private void btnSumYes_Click(object sender, EventArgs e)
         {
-            btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
-            btnPrev.Enabled = true;
+            sumNo = false;
+            pnlSummary.Visible = false;
+            pnlComplete.Visible = true;
+            pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+            btnPrev.Enabled = false;
+            btnNext.Enabled = false;
 
         }
 
         private void btnSumNo_Click(object sender, EventArgs e)
         {
-            btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
-            btnPrev.Enabled = true;
+            sumNo = true;
+            pnlSummary.Visible = false;
+            pnlOrderType.Visible = true;
+            pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+            btnPrev.Enabled = false;
+            btnNext.Enabled = false;
         }
 
        
