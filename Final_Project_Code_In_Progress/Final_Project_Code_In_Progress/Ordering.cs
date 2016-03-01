@@ -757,6 +757,15 @@ namespace Final_Project_Code_In_Progress
             
         }
 
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            btnComplete.Enabled = true;
+            lblStack.Text = optionsArray[4] = "";
+            pnlStart.Visible = true;
+            pnlComplete.Visible = false;
+
+        }
+
      
 
     }

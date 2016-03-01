@@ -89,6 +89,7 @@
             this.btnNavToppings = new System.Windows.Forms.Button();
             this.btnNavCheese = new System.Windows.Forms.Button();
             this.btnNavBun = new System.Windows.Forms.Button();
+            this.btnComplete = new System.Windows.Forms.Button();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -616,6 +617,7 @@
             // 
             // pnlComplete
             // 
+            this.pnlComplete.Controls.Add(this.btnComplete);
             this.pnlComplete.Controls.Add(this.label9);
             this.pnlComplete.Location = new System.Drawing.Point(155, 118);
             this.pnlComplete.Name = "pnlComplete";
@@ -749,14 +751,25 @@
             this.btnNavBun.UseVisualStyleBackColor = true;
             this.btnNavBun.Click += new System.EventHandler(this.btnNavBun_Click);
             // 
+            // btnComplete
+            // 
+            this.btnComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComplete.Location = new System.Drawing.Point(284, 149);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(180, 67);
+            this.btnComplete.TabIndex = 1;
+            this.btnComplete.Text = "Start New Order";
+            this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
             // Ordering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 653);
+            this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlLocation);
-            this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlOrderType);
             this.Controls.Add(this.pnlSpecialty);
             this.Controls.Add(this.pnlNav);
@@ -864,6 +877,7 @@
         private System.Windows.Forms.Button btnSpec2;
         private System.Windows.Forms.Label lblStackSum;
         private System.Windows.Forms.Label lblDineLocation;
+        private System.Windows.Forms.Button btnComplete;
     }
 }
 
