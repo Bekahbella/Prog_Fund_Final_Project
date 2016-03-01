@@ -699,8 +699,8 @@ namespace Final_Project_Code_In_Progress
 
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
-   
         {
+            //navBun = true;
             pnlBun.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
