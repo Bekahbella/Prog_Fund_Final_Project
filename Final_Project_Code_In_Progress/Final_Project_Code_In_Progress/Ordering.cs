@@ -40,7 +40,6 @@ namespace Final_Project_Code_In_Progress
         {
 
             pnlStart.Visible = true;
-            //Hide all panels
             pnlLocation.Visible = false;
             pnlOrderType.Visible = false;
             pnlPreviousNext.Visible = true;
@@ -700,38 +699,79 @@ namespace Final_Project_Code_In_Progress
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
         {
-            //navBun = true;
-            pnlBun.Visible = true;
+            pnlStart.Visible = false;
+            pnlLocation.Visible = false;
+            pnlOrderType.Visible = false;
             pnlPreviousNext.Visible = true;
+            pnlBuild.Visible = false;
+            pnlBun.Visible = true;
+            pnlCheese.Visible = false;
+            pnlToppings.Visible = false;
+            pnlSauce.Visible = false;
+            pnlSpecialty.Visible = false;
+            pnlSummary.Visible = false;
+            pnlComplete.Visible = false;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
+            
         }
        
 
         private void btnNavCheese_Click(object sender, EventArgs e)
         {
-             pnlCheese.Visible = true;
-             pnlPreviousNext.Visible = true;
-             pnlNav.Visible = true;
-             pnlStack.Visible = true;
+            pnlStart.Visible = false;
+            pnlLocation.Visible = false;
+            pnlOrderType.Visible = false;
+            pnlPreviousNext.Visible = true;
+            pnlBuild.Visible = false;
+            pnlBun.Visible = false;
+            pnlCheese.Visible = true;
+            pnlToppings.Visible = false;
+            pnlSauce.Visible = false;
+            pnlSpecialty.Visible = false;
+            pnlSummary.Visible = false;
+            pnlComplete.Visible = false;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;
+             
         }
 
         private void btnNavToppings_Click(object sender, EventArgs e)
         {
-          
-            pnlToppings.Visible = true;
+            pnlStart.Visible = false;
+            pnlLocation.Visible = false;
+            pnlOrderType.Visible = false;
             pnlPreviousNext.Visible = true;
+            pnlBuild.Visible = false;
+            pnlBun.Visible = false;
+            pnlCheese.Visible = false;
+            pnlToppings.Visible = true;
+            pnlSauce.Visible = false;
+            pnlSpecialty.Visible = false;
+            pnlSummary.Visible = false;
+            pnlComplete.Visible = false;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
+        
         }
 
         private void btnNavSauce_Click(object sender, EventArgs e)
         {
-           
-            pnlSauce.Visible = true;
+            pnlStart.Visible = false;
+            pnlLocation.Visible = false;
+            pnlOrderType.Visible = false;
             pnlPreviousNext.Visible = true;
+            pnlBuild.Visible = false;
+            pnlBun.Visible = false;
+            pnlCheese.Visible = false;
+            pnlToppings.Visible = false;
+            pnlSauce.Visible = true;
+            pnlSpecialty.Visible = false;
+            pnlSummary.Visible = false;
+            pnlComplete.Visible = false;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
+
         }
 
         private void btnSumYes_Click(object sender, EventArgs e)
