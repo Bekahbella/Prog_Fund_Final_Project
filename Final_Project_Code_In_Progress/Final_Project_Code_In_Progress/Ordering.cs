@@ -17,10 +17,10 @@ namespace Final_Project_Code_In_Progress
         bool sumNo;
         //string bunType = "";
         string orderStep; //keeps track of current pannel
-        bool navSauce;
-        bool navTopping;
-        bool navCheese;
-        bool navBun;
+       // bool navSauce;
+        //bool navTopping;
+        //bool navCheese;
+        //bool navBun;
 
 
         
@@ -74,10 +74,10 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "start";
             }
-            btnNavBun.Enabled = true;
-            btnNavCheese.Enabled = true;
-            btnNavToppings.Enabled = true;
-            btnNavSauce.Enabled = true;
+            btnNavBun.Enabled = false;
+            btnNavCheese.Enabled = false;
+            btnNavToppings.Enabled = false;
+            btnNavSauce.Enabled = false;
 
         }
 
@@ -88,10 +88,10 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "location";
             }
-            btnNavBun.Enabled = true;
-            btnNavCheese.Enabled = true;
-            btnNavToppings.Enabled = true;
-            btnNavSauce.Enabled = true;
+            btnNavBun.Enabled = false;
+            btnNavCheese.Enabled = false;
+            btnNavToppings.Enabled = false;
+            btnNavSauce.Enabled = false;
             btnPrev.Enabled = true;
             btnNext.Visible = true;
 
@@ -117,17 +117,19 @@ namespace Final_Project_Code_In_Progress
             if (pnlSpecialty.Visible == true)
             {
                 orderStep = "specialty";
-            }
-            if (optionsArray[4] == "")
-            {
+                btnNext.Enabled = false; //must select type before moving on
+                btnPrev.Enabled = true;
+                btnNext.Visible = true;
                 btnNavBun.Enabled = true;
                 btnNavCheese.Enabled = true;
                 btnNavToppings.Enabled = true;
                 btnNavSauce.Enabled = true;
-                btnPrev.Enabled = true;
-                btnNext.Visible = true;
-                
 
+            }
+            if (optionsArray[4] == "")
+            {
+                
+         
             }
 
         }
@@ -157,16 +159,18 @@ namespace Final_Project_Code_In_Progress
             if (pnlBun.Visible == true)
             {
                 orderStep = "bun";
-                btnNext.Enabled = false; //button is there but you can't click on it
 
                 if (optionsArray[0] == "") //if array position 0 is equal to an empty array do parenthesis
                 {
-                    btnNavBun.Enabled = true;
-                    btnNavCheese.Enabled = true;
-                    btnNavToppings.Enabled = true;
-                    btnNavSauce.Enabled = true;
+                    btnNext.Enabled = false; //button is there but you can't click on it
+                    //btnNavBun.Enabled = true;
+                    //btnNavCheese.Enabled = true;
+                    //btnNavToppings.Enabled = true;
+                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true; //continue button will be enabled
+                    NavEnabled();
+                    
                 }
             }
         }
@@ -177,15 +181,19 @@ namespace Final_Project_Code_In_Progress
             if (pnlCheese.Visible == true)
             {
                 orderStep = "cheese";
-                btnNext.Enabled = false; //must select type before moving on
+               
+
                 if (optionsArray[1] == "")
                 {
-                    btnNavBun.Enabled = true;
-                    btnNavCheese.Enabled = true;
-                    btnNavToppings.Enabled = true;
-                    btnNavSauce.Enabled = true;
+                    btnNext.Enabled = false; //must select type before moving on
+                    //btnNavBun.Enabled = true;
+                    //btnNavCheese.Enabled = true;
+                    //btnNavToppings.Enabled = true;
+                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
+                    NavEnabled();
+                    
                 }
                  
             }
@@ -196,15 +204,17 @@ namespace Final_Project_Code_In_Progress
             if (pnlToppings.Visible == true)
             {
                 orderStep = "toppings";
-                btnNext.Enabled = false; //must select type before moving on
+                
                 if (optionsArray[2] == "")
                 {
-                    btnNavBun.Enabled = true;
-                    btnNavCheese.Enabled = true;
-                    btnNavToppings.Enabled = true;
-                    btnNavSauce.Enabled = true;
+                    btnNext.Enabled = false; //must select type before moving on
+                    //btnNavBun.Enabled = true;
+                    //btnNavCheese.Enabled = true;
+                    //btnNavToppings.Enabled = true;
+                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
+                    NavEnabled();
                 }
 
             }
@@ -216,19 +226,30 @@ namespace Final_Project_Code_In_Progress
             if (pnlSauce.Visible == true)
             {
                 orderStep = "sauce";
-                btnNext.Enabled = false; //must select type before moving on
+
                 if (optionsArray[3] == "")
                 {
-                    btnNavBun.Enabled = true;
-                    btnNavCheese.Enabled = true;
-                    btnNavToppings.Enabled = true;
-                    btnNavSauce.Enabled = true;
+                    btnNext.Enabled = false; //must select type before moving on
+                    //btnNavBun.Enabled = true;
+                    //btnNavCheese.Enabled = true;
+                    //btnNavToppings.Enabled = true;
+                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
+                    NavEnabled();
                 }
 
             }
         }
+
+        public void NavEnabled()
+        {
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavToppings.Enabled = true;
+        }
+        
 
         private void pnlSummary_VisibleChanged(object sender, EventArgs e)
         {
@@ -236,12 +257,14 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "Summary";
             }
-            btnNavBun.Enabled = true;
-            btnNavCheese.Enabled = true;
-            btnNavToppings.Enabled = true;
-            btnNavSauce.Enabled = true;
+            //btnNavBun.Enabled = true;
+            //btnNavCheese.Enabled = true;
+            //btnNavToppings.Enabled = true;
+            //btnNavSauce.Enabled = true;
+            NavEnabled();
             btnPrev.Enabled = true;
-            btnNext.Enabled = true;
+            btnNext.Visible = true;
+            pnlStack.Visible = false;
         }
 
         private void pnlComplete_VisibleChanged(object sender, EventArgs e)
@@ -250,12 +273,14 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "Complete";
             }
-            btnNavBun.Enabled = true;
-            btnNavCheese.Enabled = true;
-            btnNavToppings.Enabled = true;
-            btnNavSauce.Enabled = true;
+            //btnNavBun.Enabled = true;
+            //btnNavCheese.Enabled = true;
+            //btnNavToppings.Enabled = true;
+            //btnNavSauce.Enabled = true;
+            NavEnabled();
             btnPrev.Enabled = true;
             btnNext.Enabled = false;
+           
         }
 
 
@@ -278,28 +303,29 @@ namespace Final_Project_Code_In_Progress
         private void btnIn_Click(object sender, EventArgs e)
         {
             takeOut = false;
+            lblDineLocation.Text = "Dine In";
             pnlLocation.Visible = false;
             pnlOrderType.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
-            pnlStack.Visible = true;
-
+            pnlStack.Visible = true;     
         }
 
         private void btnOut_Click(object sender, EventArgs e)
         {
-
             takeOut = true;
+            lblDineLocation.Text = "Take Out";
             pnlLocation.Visible = false;
             pnlOrderType.Visible = true;
             pnlPreviousNext.Visible = true;
+            pnlNav.Visible = true;
+            pnlStack.Visible = true;    
         }
 
         //pnl 3 Build panel button clicks
         private void btnBuild_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
-            //pnlBun.Visible = true;
             pnlBuild.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
@@ -438,7 +464,7 @@ namespace Final_Project_Code_In_Progress
                 
         
         
-        //Build Panel
+        //Build Panel Button
         private void btnBuildStart_Click(object sender, EventArgs e)
         {
             pnlBuild.Visible = false;
@@ -450,6 +476,8 @@ namespace Final_Project_Code_In_Progress
             btnNavCheese.Enabled = true;
             btnNavToppings.Enabled = true;
             btnNavSauce.Enabled = true;
+          
+           
         }
 
 
@@ -463,6 +491,7 @@ namespace Final_Project_Code_In_Progress
             string bunType = Bun.createBun("whiteBun\n");
             optionsArray[0] = bunType;
             lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
 
         }
 
@@ -475,6 +504,7 @@ namespace Final_Project_Code_In_Progress
             string bunType = Bun.createBun("wheatBun\n");
             optionsArray[0] = bunType;
             lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
         }
 
         private void btnBun3_Click(object sender, EventArgs e)
@@ -486,6 +516,7 @@ namespace Final_Project_Code_In_Progress
             string bunType = Bun.createBun("potatoBun\n");
             optionsArray[0] = bunType;
             lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
         }
     
        //panel cheese button click start
@@ -499,6 +530,7 @@ namespace Final_Project_Code_In_Progress
             string cheeseType = Cheese.createCheese("American\n");
             optionsArray[1] = cheeseType;
             lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
 
         private void btnCheddar_Click(object sender, EventArgs e)
@@ -510,6 +542,7 @@ namespace Final_Project_Code_In_Progress
             string cheeseType = Cheese.createCheese("Cheddar\n");
             optionsArray[1] = cheeseType;
             lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
         private void btnSwiss_Click(object sender, EventArgs e)
         {
@@ -520,6 +553,7 @@ namespace Final_Project_Code_In_Progress
             string cheeseType = Cheese.createCheese("Swiss\n");
             optionsArray[1] = cheeseType;
             lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
 
         private void btnNoCheese_Click(object sender, EventArgs e)
@@ -532,6 +566,7 @@ namespace Final_Project_Code_In_Progress
             string cheeseType = Cheese.createCheese("NoCheese\n");
             optionsArray[1] = cheeseType;
             lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
 
          //Toppings Panel button click start
@@ -544,6 +579,7 @@ namespace Final_Project_Code_In_Progress
             string ToppingType = Toppings.createToppings("Pickle\n");
             optionsArray[2] = ToppingType;
             lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
         private void btnTomato_Click(object sender, EventArgs e)
         {
@@ -554,6 +590,7 @@ namespace Final_Project_Code_In_Progress
             string ToppingType = Toppings.createToppings("Tomato\n");
             optionsArray[2] = ToppingType;
             lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
         private void btnOnion_Click(object sender, EventArgs e)
@@ -565,6 +602,7 @@ namespace Final_Project_Code_In_Progress
             string ToppingType = Toppings.createToppings("Onion\n");
             optionsArray[2] = ToppingType;
             lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
         private void btnLettuce_Click(object sender, EventArgs e)
@@ -576,6 +614,7 @@ namespace Final_Project_Code_In_Progress
             string ToppingType = Toppings.createToppings("Lettuce\n");
             optionsArray[2] = ToppingType;
             lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
         
@@ -590,6 +629,7 @@ namespace Final_Project_Code_In_Progress
             string SauceType = Sauce.createSauce("Ketchup\n");
             optionsArray[3] = SauceType;
             lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
         private void btnMustard_Click(object sender, EventArgs e)
@@ -601,6 +641,7 @@ namespace Final_Project_Code_In_Progress
             string SauceType = Sauce.createSauce("Mustard\n");
             optionsArray[3] = SauceType;
             lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
         private void btnMayo_Click(object sender, EventArgs e)
@@ -612,6 +653,7 @@ namespace Final_Project_Code_In_Progress
             string SauceType = Sauce.createSauce("Mayo\n");
             optionsArray[3] = SauceType;
             lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
         private void btnSpecialSauce_Click(object sender, EventArgs e)
@@ -624,6 +666,7 @@ namespace Final_Project_Code_In_Progress
             optionsArray[3] = SauceType;
             //buildOptions();//calling method that builds stack when selection is made
             lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
         //Specialty Button Clicks
@@ -633,15 +676,17 @@ namespace Final_Project_Code_In_Progress
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             optionsArray[4] = "Big Mac\n";
-            lblStack.Text += optionsArray[4];//setting label stack text to options array
+            lblStack.Text = optionsArray[4];//setting label stack text to options array
+            lblStackSum.Text = optionsArray[4];//setting lable stack on summary page
         }
 
         private void btnSpec2_Click(object sender, EventArgs e) //Royal with Cheese
         {
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-            optionsArray[4] = "Royal With Cheese\n";
-            lblStack.Text += optionsArray[4];//setting label stack text to options array
+            optionsArray[4] = "Royal With\n Cheese\n";
+            lblStack.Text = optionsArray[4];//setting label stack text to options array
+            lblStackSum.Text = optionsArray[4];//setting lable stack on summary page
         }
 
 
@@ -656,29 +701,24 @@ namespace Final_Project_Code_In_Progress
         private void btnNavBun_Click(object sender, EventArgs e)
    
         {
-            //navBun = true;
-            if (navBun == true)
-            {
-                pnlBun.Visible = true;
-            }
-            //pnlBun.Visible = true;
+            pnlBun.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
         }
+       
 
         private void btnNavCheese_Click(object sender, EventArgs e)
         {
-            //navCheese = true;
-            pnlCheese.Visible = true;
-            pnlPreviousNext.Visible = true;
-            pnlNav.Visible = true;
-            pnlStack.Visible = true;
+             pnlCheese.Visible = true;
+             pnlPreviousNext.Visible = true;
+             pnlNav.Visible = true;
+             pnlStack.Visible = true;
         }
 
         private void btnNavToppings_Click(object sender, EventArgs e)
         {
-            //navTopping = true;
+          
             pnlToppings.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -687,7 +727,7 @@ namespace Final_Project_Code_In_Progress
 
         private void btnNavSauce_Click(object sender, EventArgs e)
         {
-            //navSauce = true;
+           
             pnlSauce.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
@@ -716,6 +756,8 @@ namespace Final_Project_Code_In_Progress
             pnlStack.Visible = true;
             
         }
+
+     
 
     }
 }

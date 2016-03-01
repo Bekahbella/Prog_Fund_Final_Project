@@ -70,6 +70,8 @@
             this.btnSpec1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlSummary = new System.Windows.Forms.Panel();
+            this.lblDineLocation = new System.Windows.Forms.Label();
+            this.lblStackSum = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnSumNo = new System.Windows.Forms.Button();
             this.btnSumYes = new System.Windows.Forms.Button();
@@ -147,6 +149,7 @@
             // 
             // btnOut
             // 
+            this.btnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.Location = new System.Drawing.Point(356, 111);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(115, 76);
@@ -157,6 +160,7 @@
             // 
             // btnIn
             // 
+            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.Location = new System.Drawing.Point(224, 111);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(115, 76);
@@ -535,32 +539,55 @@
             // 
             // pnlSummary
             // 
+            this.pnlSummary.Controls.Add(this.lblDineLocation);
+            this.pnlSummary.Controls.Add(this.lblStackSum);
             this.pnlSummary.Controls.Add(this.label11);
             this.pnlSummary.Controls.Add(this.btnSumNo);
             this.pnlSummary.Controls.Add(this.btnSumYes);
             this.pnlSummary.Controls.Add(this.label8);
             this.pnlSummary.Location = new System.Drawing.Point(152, 118);
             this.pnlSummary.Name = "pnlSummary";
-            this.pnlSummary.Size = new System.Drawing.Size(750, 265);
+            this.pnlSummary.Size = new System.Drawing.Size(753, 265);
             this.pnlSummary.TabIndex = 1;
             this.pnlSummary.VisibleChanged += new System.EventHandler(this.pnlSummary_VisibleChanged);
+            // 
+            // lblDineLocation
+            // 
+            this.lblDineLocation.AutoSize = true;
+            this.lblDineLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDineLocation.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblDineLocation.Location = new System.Drawing.Point(91, 47);
+            this.lblDineLocation.Name = "lblDineLocation";
+            this.lblDineLocation.Size = new System.Drawing.Size(53, 18);
+            this.lblDineLocation.TabIndex = 5;
+            this.lblDineLocation.Text = "In/Out";
+            // 
+            // lblStackSum
+            // 
+            this.lblStackSum.AutoSize = true;
+            this.lblStackSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStackSum.Location = new System.Drawing.Point(91, 84);
+            this.lblStackSum.Name = "lblStackSum";
+            this.lblStackSum.Size = new System.Drawing.Size(107, 18);
+            this.lblStackSum.TabIndex = 4;
+            this.lblStackSum.Text = "orderSummary";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(249, 68);
+            this.label11.Location = new System.Drawing.Point(453, 47);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 24);
+            this.label11.Size = new System.Drawing.Size(276, 24);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Is Your Order Correct?";
+            this.label11.Text = "Is the Order on the Left Correct?";
             // 
             // btnSumNo
             // 
             this.btnSumNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSumNo.Location = new System.Drawing.Point(356, 111);
+            this.btnSumNo.Location = new System.Drawing.Point(601, 88);
             this.btnSumNo.Name = "btnSumNo";
-            this.btnSumNo.Size = new System.Drawing.Size(92, 67);
+            this.btnSumNo.Size = new System.Drawing.Size(66, 38);
             this.btnSumNo.TabIndex = 2;
             this.btnSumNo.Text = "No";
             this.btnSumNo.UseVisualStyleBackColor = true;
@@ -569,9 +596,9 @@
             // btnSumYes
             // 
             this.btnSumYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSumYes.Location = new System.Drawing.Point(224, 111);
+            this.btnSumYes.Location = new System.Drawing.Point(507, 87);
             this.btnSumYes.Name = "btnSumYes";
-            this.btnSumYes.Size = new System.Drawing.Size(92, 67);
+            this.btnSumYes.Size = new System.Drawing.Size(66, 38);
             this.btnSumYes.TabIndex = 1;
             this.btnSumYes.Text = "Yes";
             this.btnSumYes.UseVisualStyleBackColor = true;
@@ -581,7 +608,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(236, 18);
+            this.label8.Location = new System.Drawing.Point(34, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(245, 37);
             this.label8.TabIndex = 0;
@@ -590,19 +617,19 @@
             // pnlComplete
             // 
             this.pnlComplete.Controls.Add(this.label9);
-            this.pnlComplete.Location = new System.Drawing.Point(152, 118);
+            this.pnlComplete.Location = new System.Drawing.Point(155, 118);
             this.pnlComplete.Name = "pnlComplete";
-            this.pnlComplete.Size = new System.Drawing.Size(756, 271);
+            this.pnlComplete.Size = new System.Drawing.Size(753, 271);
             this.pnlComplete.TabIndex = 1;
             this.pnlComplete.VisibleChanged += new System.EventHandler(this.pnlComplete_VisibleChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(187, 47);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(168, 68);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(318, 31);
+            this.label9.Size = new System.Drawing.Size(437, 42);
             this.label9.TabIndex = 0;
             this.label9.Text = "Thank you for your order!";
             // 
@@ -613,7 +640,7 @@
             this.pnlStack.Controls.Add(this.lblOrder);
             this.pnlStack.Location = new System.Drawing.Point(12, 118);
             this.pnlStack.Name = "pnlStack";
-            this.pnlStack.Size = new System.Drawing.Size(137, 332);
+            this.pnlStack.Size = new System.Drawing.Size(134, 332);
             this.pnlStack.TabIndex = 4;
             // 
             // lblStack
@@ -673,15 +700,15 @@
             this.pnlNav.Controls.Add(this.btnNavToppings);
             this.pnlNav.Controls.Add(this.btnNavCheese);
             this.pnlNav.Controls.Add(this.btnNavBun);
-            this.pnlNav.Location = new System.Drawing.Point(12, 12);
+            this.pnlNav.Location = new System.Drawing.Point(152, 12);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(896, 104);
+            this.pnlNav.Size = new System.Drawing.Size(756, 104);
             this.pnlNav.TabIndex = 1;
             // 
             // btnNavSauce
             // 
             this.btnNavSauce.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavSauce.Location = new System.Drawing.Point(676, 18);
+            this.btnNavSauce.Location = new System.Drawing.Point(592, 20);
             this.btnNavSauce.Name = "btnNavSauce";
             this.btnNavSauce.Size = new System.Drawing.Size(102, 63);
             this.btnNavSauce.TabIndex = 3;
@@ -692,7 +719,7 @@
             // btnNavToppings
             // 
             this.btnNavToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavToppings.Location = new System.Drawing.Point(490, 18);
+            this.btnNavToppings.Location = new System.Drawing.Point(403, 20);
             this.btnNavToppings.Name = "btnNavToppings";
             this.btnNavToppings.Size = new System.Drawing.Size(102, 63);
             this.btnNavToppings.TabIndex = 2;
@@ -703,7 +730,7 @@
             // btnNavCheese
             // 
             this.btnNavCheese.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavCheese.Location = new System.Drawing.Point(325, 18);
+            this.btnNavCheese.Location = new System.Drawing.Point(224, 19);
             this.btnNavCheese.Name = "btnNavCheese";
             this.btnNavCheese.Size = new System.Drawing.Size(102, 63);
             this.btnNavCheese.TabIndex = 1;
@@ -714,7 +741,7 @@
             // btnNavBun
             // 
             this.btnNavBun.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavBun.Location = new System.Drawing.Point(164, 18);
+            this.btnNavBun.Location = new System.Drawing.Point(60, 18);
             this.btnNavBun.Name = "btnNavBun";
             this.btnNavBun.Size = new System.Drawing.Size(102, 63);
             this.btnNavBun.TabIndex = 0;
@@ -727,12 +754,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 653);
+            this.Controls.Add(this.pnlSummary);
+            this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlOrderType);
             this.Controls.Add(this.pnlSpecialty);
-            this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlNav);
-            this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlCheese);
             this.Controls.Add(this.pnlBuild);
             this.Controls.Add(this.pnlStart);
@@ -835,6 +862,8 @@
         private System.Windows.Forms.Button btnLettuce;
         private System.Windows.Forms.Button btnSpec1;
         private System.Windows.Forms.Button btnSpec2;
+        private System.Windows.Forms.Label lblStackSum;
+        private System.Windows.Forms.Label lblDineLocation;
     }
 }
 
