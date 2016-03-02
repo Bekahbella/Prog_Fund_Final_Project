@@ -53,10 +53,10 @@ namespace Final_Project_Code_In_Progress
             pnlComplete.Visible = false;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
-            btnNavBun.Enabled = false;
-            btnNavCheese.Enabled = false;
-            btnNavToppings.Enabled = false;
-            btnNavSauce.Enabled = false;
+            btnNavBun.Enabled = true;
+            btnNavCheese.Enabled = true;
+            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
             
 
             lblStack.Text = "";
@@ -661,7 +661,8 @@ namespace Final_Project_Code_In_Progress
             pnlCheese.Visible = false;
             pnlToppings.Visible = false;
             pnlSauce.Visible = false;
-            NavVisible();     
+            NavVisible();
+    
         }
        
 
