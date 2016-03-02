@@ -36,7 +36,7 @@ namespace Final_Project_Code_In_Progress
         }
         //Application Load Event
 
-        private void Form1_Load(object sender, EventArgs e) //all things you change programmatically
+        private void Form1_Load(object sender, EventArgs e) //default setting of all things you change programmatically 
         {
 
             pnlStart.Visible = true;
@@ -76,7 +76,7 @@ namespace Final_Project_Code_In_Progress
             btnNavBun.Enabled = false;
             btnNavCheese.Enabled = false;
             btnNavToppings.Enabled = false;
-            btnNavSauce.Enabled = false;
+            btnNavSauce.Enabled = false; 
 
         }
 
@@ -123,12 +123,8 @@ namespace Final_Project_Code_In_Progress
                 btnNavCheese.Enabled = true;
                 btnNavToppings.Enabled = true;
                 btnNavSauce.Enabled = true;
+                pnlStack.Visible = true;
 
-            }
-            if (optionsArray[4] == "")
-            {
-                
-         
             }
 
         }
@@ -162,13 +158,10 @@ namespace Final_Project_Code_In_Progress
                 if (optionsArray[0] == "") //if array position 0 is equal to an empty array do parenthesis
                 {
                     btnNext.Enabled = false; //button is there but you can't click on it
-                    //btnNavBun.Enabled = true;
-                    //btnNavCheese.Enabled = true;
-                    //btnNavToppings.Enabled = true;
-                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true; //continue button will be enabled
                     NavEnabled();
+                    
                     
                 }
             }
@@ -181,14 +174,9 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "cheese";
                
-
                 if (optionsArray[1] == "")
                 {
                     btnNext.Enabled = false; //must select type before moving on
-                    //btnNavBun.Enabled = true;
-                    //btnNavCheese.Enabled = true;
-                    //btnNavToppings.Enabled = true;
-                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
                     NavEnabled();
@@ -207,10 +195,6 @@ namespace Final_Project_Code_In_Progress
                 if (optionsArray[2] == "")
                 {
                     btnNext.Enabled = false; //must select type before moving on
-                    //btnNavBun.Enabled = true;
-                    //btnNavCheese.Enabled = true;
-                    //btnNavToppings.Enabled = true;
-                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
                     NavEnabled();
@@ -229,10 +213,6 @@ namespace Final_Project_Code_In_Progress
                 if (optionsArray[3] == "")
                 {
                     btnNext.Enabled = false; //must select type before moving on
-                    //btnNavBun.Enabled = true;
-                    //btnNavCheese.Enabled = true;
-                    //btnNavToppings.Enabled = true;
-                    //btnNavSauce.Enabled = true;
                     btnPrev.Enabled = true;
                     btnNext.Enabled = true;
                     NavEnabled();
@@ -241,12 +221,12 @@ namespace Final_Project_Code_In_Progress
             }
         }
 
-        public void NavEnabled()
+        public void NavEnabled() //btn enabled instructions used on panels to indicate when nav should work
         {
             btnNavBun.Enabled = true;
             btnNavCheese.Enabled = true;
             btnNavToppings.Enabled = true;
-            btnNavToppings.Enabled = true;
+            btnNavSauce.Enabled = true;
         }
         
 
@@ -256,10 +236,7 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "Summary";
             }
-            //btnNavBun.Enabled = true;
-            //btnNavCheese.Enabled = true;
-            //btnNavToppings.Enabled = true;
-            //btnNavSauce.Enabled = true;
+         
             NavEnabled();
             btnPrev.Enabled = true;
             btnNext.Visible = true;
@@ -272,10 +249,7 @@ namespace Final_Project_Code_In_Progress
             {
                 orderStep = "Complete";
             }
-            //btnNavBun.Enabled = true;
-            //btnNavCheese.Enabled = true;
-            //btnNavToppings.Enabled = true;
-            //btnNavSauce.Enabled = true;
+           
             NavEnabled();
             btnPrev.Enabled = true;
             btnNext.Enabled = false;
@@ -396,8 +370,6 @@ namespace Final_Project_Code_In_Progress
                     pnlComplete.Visible = false;
                     pnlSummary.Visible = true;
                     break;
-                    
-
                 default:
                     pnlStart.Visible = true;
                     break;
@@ -451,8 +423,6 @@ namespace Final_Project_Code_In_Progress
                     pnlSummary.Visible = false;
                     pnlComplete.Visible = true;
                     break;
-
-
                 default:
                     pnlStart.Visible = true;
                     break;
@@ -460,8 +430,6 @@ namespace Final_Project_Code_In_Progress
             }
 
         }
-                
-        
         
         //Build Panel Button
         private void btnBuildStart_Click(object sender, EventArgs e)
@@ -470,18 +438,12 @@ namespace Final_Project_Code_In_Progress
             pnlBun.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
-            pnlStack.Visible = true;
-            btnNavBun.Enabled = true;
-            btnNavCheese.Enabled = true;
-            btnNavToppings.Enabled = true;
-            btnNavSauce.Enabled = true;
-          
-           
+            pnlStack.Visible = true;   
         }
 
 
         //Bun panel button click start
-        private void btnBun1_Click(object sender, EventArgs e)
+        private void btnBun1_Click(object sender, EventArgs e) //white bun
         {
             //optionsArray[0] = "whiteBun\n";
             //lblStack.Text = optionsArray[0];
@@ -494,7 +456,7 @@ namespace Final_Project_Code_In_Progress
 
         }
 
-        private void btnBun2_Click(object sender, EventArgs e)
+        private void btnBun2_Click(object sender, EventArgs e) //wheat bun
         {
             //optionsArray[0] = "wheatBun\n";
             //lblStack.Text = optionsArray[0];
@@ -506,7 +468,7 @@ namespace Final_Project_Code_In_Progress
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
         }
 
-        private void btnBun3_Click(object sender, EventArgs e)
+        private void btnBun3_Click(object sender, EventArgs e) //potato bun
         {
             //optionsArray[0] = "potatoBun\n";
             //lblStack.Text = optionsArray[0];
@@ -616,7 +578,6 @@ namespace Final_Project_Code_In_Progress
             lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
-        
         //sauce panel button click start
 
         private void btnKetchup_Click(object sender, EventArgs e)
@@ -661,7 +622,7 @@ namespace Final_Project_Code_In_Progress
             //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-            string SauceType = Sauce.createSauce("SpecialSauce");
+            string SauceType = Sauce.createSauce("SpecialSauce\n");
             optionsArray[3] = SauceType;
             //buildOptions();//calling method that builds stack when selection is made
             lblStack.Text += optionsArray[3];//setting label stack text to options array
@@ -688,9 +649,6 @@ namespace Final_Project_Code_In_Progress
             lblStackSum.Text = optionsArray[4];//setting lable stack on summary page
         }
 
-
-    
-
         //private void buildOptions() //method to build the stack 
         //{
         //    lblStack.Text = string.Join("\n", optionsArray);
@@ -699,79 +657,57 @@ namespace Final_Project_Code_In_Progress
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
         {
-            pnlStart.Visible = false;
-            pnlLocation.Visible = false;
-            pnlOrderType.Visible = false;
-            pnlPreviousNext.Visible = true;
-            pnlBuild.Visible = false;
             pnlBun.Visible = true;
             pnlCheese.Visible = false;
             pnlToppings.Visible = false;
             pnlSauce.Visible = false;
-            pnlSpecialty.Visible = false;
-            pnlSummary.Visible = false;
-            pnlComplete.Visible = false;
-            pnlNav.Visible = true;
-            pnlStack.Visible = true;
-            
+            NavVisible();     
         }
        
 
         private void btnNavCheese_Click(object sender, EventArgs e)
         {
-            pnlStart.Visible = false;
-            pnlLocation.Visible = false;
-            pnlOrderType.Visible = false;
-            pnlPreviousNext.Visible = true;
-            pnlBuild.Visible = false;
             pnlBun.Visible = false;
             pnlCheese.Visible = true;
             pnlToppings.Visible = false;
             pnlSauce.Visible = false;
-            pnlSpecialty.Visible = false;
-            pnlSummary.Visible = false;
-            pnlComplete.Visible = false;
-            pnlNav.Visible = true;
-            pnlStack.Visible = true;
-             
+            NavVisible();
         }
 
         private void btnNavToppings_Click(object sender, EventArgs e)
         {
-            pnlStart.Visible = false;
-            pnlLocation.Visible = false;
-            pnlOrderType.Visible = false;
-            pnlPreviousNext.Visible = true;
-            pnlBuild.Visible = false;
+          
             pnlBun.Visible = false;
             pnlCheese.Visible = false;
             pnlToppings.Visible = true;
             pnlSauce.Visible = false;
-            pnlSpecialty.Visible = false;
-            pnlSummary.Visible = false;
-            pnlComplete.Visible = false;
-            pnlNav.Visible = true;
-            pnlStack.Visible = true;
+            NavVisible();
         
         }
 
         private void btnNavSauce_Click(object sender, EventArgs e)
         {
+           
+            pnlBun.Visible = false;
+            pnlCheese.Visible = false;
+            pnlToppings.Visible = false;
+            pnlSauce.Visible = true;
+            NavVisible();
+
+        }
+
+        public void NavVisible() //load instructions for panels used in navagation clicking
+        {
             pnlStart.Visible = false;
             pnlLocation.Visible = false;
             pnlOrderType.Visible = false;
             pnlPreviousNext.Visible = true;
             pnlBuild.Visible = false;
-            pnlBun.Visible = false;
-            pnlCheese.Visible = false;
-            pnlToppings.Visible = false;
-            pnlSauce.Visible = true;
             pnlSpecialty.Visible = false;
             pnlSummary.Visible = false;
             pnlComplete.Visible = false;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
-
         }
 
         private void btnSumYes_Click(object sender, EventArgs e)
@@ -790,10 +726,11 @@ namespace Final_Project_Code_In_Progress
         {
             sumNo = true;
             pnlSummary.Visible = false;
-            pnlOrderType.Visible = true;
+            pnlStart.Visible = true;
             pnlPreviousNext.Visible = true;
             pnlNav.Visible = true;
             pnlStack.Visible = true;
+            lblStack.Text = optionsArray[4] = "";
             
         }
 
@@ -805,8 +742,5 @@ namespace Final_Project_Code_In_Progress
             pnlComplete.Visible = false;
 
         }
-
-     
-
     }
 }
