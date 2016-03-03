@@ -445,11 +445,9 @@ namespace Final_Project_Code_In_Progress
         //Bun panel button click start
         private void btnBun1_Click(object sender, EventArgs e) //white bun
         {
-            //optionsArray[0] = "whiteBun\n";
-            //lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-            string bunType = Bun.createBun("whiteBun\n");
+            string bunType = Bun.createBun("White Bun\n");
             optionsArray[0] = bunType;
             lblStack.Text = optionsArray[0];//setting label stack text to options array
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
@@ -458,11 +456,9 @@ namespace Final_Project_Code_In_Progress
 
         private void btnBun2_Click(object sender, EventArgs e) //wheat bun
         {
-            //optionsArray[0] = "wheatBun\n";
-            //lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-            string bunType = Bun.createBun("wheatBun\n");
+            string bunType = Bun.createBun("Wheat Bun\n");
             optionsArray[0] = bunType;
             lblStack.Text = optionsArray[0];//setting label stack text to options array
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
@@ -470,11 +466,9 @@ namespace Final_Project_Code_In_Progress
 
         private void btnBun3_Click(object sender, EventArgs e) //potato bun
         {
-            //optionsArray[0] = "potatoBun\n";
-            //lblStack.Text = optionsArray[0];
             btnNext.Enabled = true;  //makes the continued button unavailable until you choose a bun type
             btnPrev.Enabled = true;
-            string bunType = Bun.createBun("potatoBun\n");
+            string bunType = Bun.createBun("Potato Bun\n");
             optionsArray[0] = bunType;
             lblStack.Text = optionsArray[0];//setting label stack text to options array
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
@@ -484,8 +478,6 @@ namespace Final_Project_Code_In_Progress
         
         private void btnAmerican_Click(object sender, EventArgs e)
         {
-            //optionsArray[1] = "americanCheese\n";
-            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("American\n");
@@ -496,8 +488,6 @@ namespace Final_Project_Code_In_Progress
 
         private void btnCheddar_Click(object sender, EventArgs e)
         {
-            //optionsArray[1] = "cheddarCheese\n";
-            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("Cheddar\n");
@@ -507,8 +497,6 @@ namespace Final_Project_Code_In_Progress
         }
         private void btnSwiss_Click(object sender, EventArgs e)
         {
-            //optionsArray[1] = "swissCheese\n";
-            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("Swiss\n");
@@ -520,8 +508,6 @@ namespace Final_Project_Code_In_Progress
         private void btnNoCheese_Click(object sender, EventArgs e)
 
         {
-            //optionsArray[1] = "noCheese\n";
-            //lblStack.Text += optionsArray[1];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("NoCheese\n");
@@ -533,19 +519,15 @@ namespace Final_Project_Code_In_Progress
          //Toppings Panel button click start
         private void btnPickle_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Pickle\n";
-            //lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-            string ToppingType = Toppings.createToppings("Pickle\n");
+            string ToppingType = Toppings.createToppings("Pickles\n");
             optionsArray[2] = ToppingType;
             lblStack.Text += optionsArray[2];//setting label stack text to options array
             lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
         private void btnTomato_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Tomato\n";
-           // lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Tomato\n");
@@ -556,8 +538,6 @@ namespace Final_Project_Code_In_Progress
 
         private void btnOnion_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Onion\n";
-            //lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Onion\n");
@@ -568,8 +548,6 @@ namespace Final_Project_Code_In_Progress
 
         private void btnLettuce_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Lettuce\n";
-            //lblStack.Text += optionsArray[2];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Lettuce\n");
@@ -582,8 +560,6 @@ namespace Final_Project_Code_In_Progress
 
         private void btnKetchup_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "Ketchup\n";
-            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Ketchup\n");
@@ -594,8 +570,6 @@ namespace Final_Project_Code_In_Progress
 
         private void btnMustard_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "Mustard\n";
-            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Mustard\n");
@@ -606,8 +580,6 @@ namespace Final_Project_Code_In_Progress
 
         private void btnMayo_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "Mayo\n";
-            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Mayo\n");
@@ -618,13 +590,10 @@ namespace Final_Project_Code_In_Progress
 
         private void btnSpecialSauce_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "SpecialSauce\n";
-            //lblStack.Text += optionsArray[3];
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("SpecialSauce\n");
             optionsArray[3] = SauceType;
-            //buildOptions();//calling method that builds stack when selection is made
             lblStack.Text += optionsArray[3];//setting label stack text to options array
             lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
@@ -649,10 +618,7 @@ namespace Final_Project_Code_In_Progress
             lblStackSum.Text = optionsArray[4];//setting lable stack on summary page
         }
 
-        //private void buildOptions() //method to build the stack 
-        //{
-        //    lblStack.Text = string.Join("\n", optionsArray);
-        //}
+ 
 
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
