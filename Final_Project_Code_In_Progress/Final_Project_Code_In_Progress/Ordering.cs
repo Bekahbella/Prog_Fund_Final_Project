@@ -57,6 +57,8 @@ namespace Final_Project_Code_In_Progress
             btnNavCheese.Enabled = true;
             btnNavToppings.Enabled = true;
             btnNavSauce.Enabled = true;
+            btnPrev.Enabled = true;
+            btnNext.Enabled = true;
             
 
             lblStack.Text = "";
@@ -76,8 +78,8 @@ namespace Final_Project_Code_In_Progress
             btnNavBun.Enabled = false;
             btnNavCheese.Enabled = false;
             btnNavToppings.Enabled = false;
-            btnNavSauce.Enabled = false; 
-
+            btnNavSauce.Enabled = false;
+            btnPrev.Enabled = false;
         }
 
 
@@ -91,8 +93,7 @@ namespace Final_Project_Code_In_Progress
             btnNavCheese.Enabled = false;
             btnNavToppings.Enabled = false;
             btnNavSauce.Enabled = false;
-            btnPrev.Enabled = true;
-            btnNext.Visible = true;
+           
 
         }
 
@@ -138,8 +139,8 @@ namespace Final_Project_Code_In_Progress
                 
             }
 
-            btnNext.Visible = true;
-            btnPrev.Enabled = true;
+            //btnNext.Visible = true;
+            //btnPrev.Enabled = true;
             btnNavBun.Enabled = true;
             btnNavCheese.Enabled = true;
             btnNavToppings.Enabled = true;
@@ -592,10 +593,11 @@ namespace Final_Project_Code_In_Progress
         {
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
-            string SauceType = Sauce.createSauce("SpecialSauce\n");
+            string SauceType = Sauce.createSauce("Special Sauce\n");
             optionsArray[3] = SauceType;
             lblStack.Text += optionsArray[3];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
+            
         }
 
         //Specialty Button Clicks
