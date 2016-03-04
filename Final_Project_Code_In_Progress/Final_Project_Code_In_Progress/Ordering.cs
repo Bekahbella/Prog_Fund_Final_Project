@@ -449,7 +449,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string bunType = Bun.createBun("White Bun\n");
             optionsArray[0] = bunType;
-            lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStack.Text = optionsArray[0];//populating label stack on stack panel from options array
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
 
         }
@@ -460,7 +460,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string bunType = Bun.createBun("Wheat Bun\n");
             optionsArray[0] = bunType;
-            lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStack.Text = optionsArray[0];//populating label stack on stack panel from options array
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
         }
 
@@ -470,7 +470,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string bunType = Bun.createBun("Potato Bun\n");
             optionsArray[0] = bunType;
-            lblStack.Text = optionsArray[0];//setting label stack text to options array
+            lblStack.Text = optionsArray[0];//populating label stack on stack panel from options array
             lblStackSum.Text = optionsArray[0];//setting lable stack on summary page
         }
     
@@ -482,8 +482,8 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("American\n");
             optionsArray[1] = cheeseType;
-            lblStack.Text += optionsArray[1];//setting label stack text to options array
-            lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
+            lblStack.Text += optionsArray[1];//populating label stack on stack panel from options array
+            lblStackSum.Text += optionsArray[1];//setting label stack on summary page
         }
 
         private void btnCheddar_Click(object sender, EventArgs e)
@@ -492,7 +492,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("Cheddar\n");
             optionsArray[1] = cheeseType;
-            lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStack.Text += optionsArray[1];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
         private void btnSwiss_Click(object sender, EventArgs e)
@@ -501,7 +501,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("Swiss\n");
             optionsArray[1] = cheeseType;
-            lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStack.Text += optionsArray[1];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
 
@@ -512,7 +512,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string cheeseType = Cheese.createCheese("NoCheese\n");
             optionsArray[1] = cheeseType;
-            lblStack.Text += optionsArray[1];//setting label stack text to options array
+            lblStack.Text += optionsArray[1];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[1];//setting lable stack on summary page
         }
 
@@ -523,7 +523,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Pickles\n");
             optionsArray[2] = ToppingType;
-            lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStack.Text += optionsArray[2];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
         private void btnTomato_Click(object sender, EventArgs e)
@@ -532,7 +532,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Tomato\n");
             optionsArray[2] = ToppingType;
-            lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStack.Text += optionsArray[2];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
@@ -542,7 +542,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Onion\n");
             optionsArray[2] = ToppingType;
-            lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStack.Text += optionsArray[2];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
@@ -552,7 +552,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string ToppingType = Toppings.createToppings("Lettuce\n");
             optionsArray[2] = ToppingType;
-            lblStack.Text += optionsArray[2];//setting label stack text to options array
+            lblStack.Text += optionsArray[2];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[2];//setting lable stack on summary page
         }
 
@@ -564,7 +564,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Ketchup\n");
             optionsArray[3] = SauceType;
-            lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStack.Text += optionsArray[3];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
@@ -574,7 +574,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Mustard\n");
             optionsArray[3] = SauceType;
-            lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStack.Text += optionsArray[3];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
@@ -584,7 +584,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("Mayo\n");
             optionsArray[3] = SauceType;
-            lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStack.Text += optionsArray[3];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
@@ -594,7 +594,7 @@ namespace Final_Project_Code_In_Progress
             btnPrev.Enabled = true;
             string SauceType = Sauce.createSauce("SpecialSauce\n");
             optionsArray[3] = SauceType;
-            lblStack.Text += optionsArray[3];//setting label stack text to options array
+            lblStack.Text += optionsArray[3];//populating label stack on stack panel from options array
             lblStackSum.Text += optionsArray[3];//setting lable stack on summary page
         }
 
@@ -605,8 +605,8 @@ namespace Final_Project_Code_In_Progress
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             optionsArray[4] = "Big Mac\n";
-            lblStack.Text = optionsArray[4];//setting label stack text to options array
-            lblStackSum.Text = optionsArray[4];//setting lable stack on summary page
+            lblStack.Text = optionsArray[4];//populating label stack on stack panel from options array
+            lblStackSum.Text = optionsArray[4];//setting label stack on summary page
         }
 
         private void btnSpec2_Click(object sender, EventArgs e) //Royal with Cheese
@@ -614,8 +614,8 @@ namespace Final_Project_Code_In_Progress
             btnNext.Enabled = true;
             btnPrev.Enabled = true;
             optionsArray[4] = "Royal With\n Cheese\n";
-            lblStack.Text = optionsArray[4];//setting label stack text to options array
-            lblStackSum.Text = optionsArray[4];//setting lable stack on summary page
+            lblStack.Text = optionsArray[4];//populating label stack on stack panel from options array
+            lblStackSum.Text = optionsArray[4];//setting label stack on summary page
         }
 
  
@@ -623,7 +623,7 @@ namespace Final_Project_Code_In_Progress
       //Panel Top Nav Button Clicks
         private void btnNavBun_Click(object sender, EventArgs e)
         {
-            pnlBun.Visible = true;
+            pnlBun.Visible = true; //make panel you want to see visible upon button click
             pnlCheese.Visible = false;
             pnlToppings.Visible = false;
             pnlSauce.Visible = false;
@@ -635,7 +635,7 @@ namespace Final_Project_Code_In_Progress
         private void btnNavCheese_Click(object sender, EventArgs e)
         {
             pnlBun.Visible = false;
-            pnlCheese.Visible = true;
+            pnlCheese.Visible = true; //make panel you want to see visible upon button click
             pnlToppings.Visible = false;
             pnlSauce.Visible = false;
             NavVisible();
@@ -646,7 +646,7 @@ namespace Final_Project_Code_In_Progress
           
             pnlBun.Visible = false;
             pnlCheese.Visible = false;
-            pnlToppings.Visible = true;
+            pnlToppings.Visible = true; //make panel you want to see visible upon button click
             pnlSauce.Visible = false;
             NavVisible();
         
@@ -658,12 +658,12 @@ namespace Final_Project_Code_In_Progress
             pnlBun.Visible = false;
             pnlCheese.Visible = false;
             pnlToppings.Visible = false;
-            pnlSauce.Visible = true;
+            pnlSauce.Visible = true; //make panel you want to see visible upon button click
             NavVisible();
 
         }
 
-        public void NavVisible() //load instructions for panels used in navagation clicking
+        public void NavVisible() //load instructions for unchanging panels used in navagation clicking
         {
             pnlStart.Visible = false;
             pnlLocation.Visible = false;
